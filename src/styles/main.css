@@ -245,7 +245,7 @@
 		oklch(80% 0.08 87)
 	);
 	--sdr-gradient: radial-gradient(
-		farthest-side circle at 50% 110%,
+		farthest-side circle at 50% 100%,
 		#52a185,
 		#aac7aa,
 		#d4bb82
