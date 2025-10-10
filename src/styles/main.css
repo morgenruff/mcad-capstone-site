@@ -224,9 +224,30 @@
 
 /* color + typography  */
 
+@font-face {
+	font-family: "Banana";
+	src: url("../assets/Banana-Outline-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
-	--c-dkblue: oklch(0.1641 0.0796 263.05);
+	--f-banana: "Banana", system-ui;
+	--c-dkblue: oklch(0.178 0.0307 263.05);
 	--c-mustard: oklch(0.8234 0.1428 73.43);
 	--c-neonyellow: oklch(0.9576 0.2086 113.79);
 	--c-jetstream: oklch(0.9065 0.0307 183.63);
+	--hdr-gradient: radial-gradient(
+		farthest-side circle at 50% 110% in oklch,
+		oklch(65% 0.09 168),
+		oklch(80% 0.05 145),
+		oklch(80% 0.08 87)
+	);
+	--sdr-gradient: radial-gradient(
+		farthest-side circle at 50% 110%,
+		#52a185,
+		#aac7aa,
+		#d4bb82
+	);
 }

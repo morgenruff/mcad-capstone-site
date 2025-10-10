@@ -2,8 +2,16 @@
 import Navigation from "../components/Navigation.astro";
 import Welcome from "../components/Welcome.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout>
     <Navigation />
+    <Welcome />
 </MainLayout>
+
+<style>
+    html {
+        background: var(--hdr-gradient);
+    }
+</style>
