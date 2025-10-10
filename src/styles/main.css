@@ -124,7 +124,7 @@
 }
 
 :where(ul, ol) {
-	list-style: square inside;
+	list-style: none;
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {

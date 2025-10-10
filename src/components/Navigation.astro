@@ -3,16 +3,40 @@ import "../styles/main.css";
 ---
 
 <nav>
+    <h1>A New Internet Home for the Weavers Guild of Minnesota</h1>
     <ul>
-        <li><a href="">Case Study</a></li>
-        <li><a href="">Progress Platform</a></li>
-        <li><a href="">Research Archive</a></li>
-        <li><a href="">Live WGM Site</a></li>
+        <li><a href="#">Case Study</a></li>
+        <li><a href="#">Progress Platform</a></li>
+        <li><a href="#">Research Archive</a></li>
+        <li><a href="https://weaversguildmn.org">Live WGM Site</a></li>
     </ul>
 </nav>
 
 <style>
     nav {
+        display: flex;
+        justify-content: space-between;
         padding: 1rem;
+        background-color: var(--c-dkblue);
+        color: var(--c-jetstream);
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    ul {
+        display: flex;
+        gap: 1rem;
+        text-decoration: none;
+        align-items: center;
+        & li a {
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 12px;
+
+            &:hover {
+                color: var(--c-dkblue);
+                background-color: var(--c-mustard);
+            }
+        }
     }
 </style>
