@@ -1,5 +1,8 @@
 ---
 import "../styles/main.css";
+import Divider from "../components/Divider.astro";
+import { Image } from "astro:assets";
+import videoSlide from "../assets/images/video-slide.png";
 ---
 
 <div id="container">
@@ -43,26 +46,32 @@ import "../styles/main.css";
                 </p>
             </div>
         </div>
-        <div class="divider"></div>
+        <Divider />
         <div class="video">
-            <img src="../assets/images/video-slide.png" alt="" />
-            <img src="../assets/images/video-slide.png" alt="" />
+            <Image
+                src={videoSlide}
+                alt="Yellow textured slide with the word video in the center."
+            />
+            <Image
+                src={videoSlide}
+                alt="Yellow textured slide with the word video in the center."
+            />
         </div>
-        <div class="divider"></div>
-        <div class="narrative">
-            <p class="narrative"></p>
-        </div>
-        <div class="divider"></div>
-        <div class="process">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-        </div>
-        <!-- whatever else -->
     </main>
+    <Divider />
+    <div class="narrative">
+        <p class="narrative"></p>
+    </div>
+    <Divider />
+    <div class="process">
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+    </div>
+    <!-- whatever else -->
 </div>
 
 <style>
@@ -71,6 +80,9 @@ import "../styles/main.css";
     }
     main {
         padding: 1rem;
+    }
+    .divider {
+        text-align: center;
     }
     .intro {
         display: grid;
@@ -96,7 +108,7 @@ import "../styles/main.css";
     .date {
         font-family: var(--f-fjalla);
         font-size: 1.5rem;
-        color: var(--c-jetstream);
+        color: var(--c-dkblue);
     }
     .hook,
     .description {
@@ -107,6 +119,7 @@ import "../styles/main.css";
     .video {
         display: grid;
         grid-template-areas: "video1 video2";
+        gap: 0.5rem;
         & img {
             margin: 1rem 0;
         }
