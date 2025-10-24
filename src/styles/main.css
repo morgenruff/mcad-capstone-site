@@ -141,7 +141,7 @@
 }
 
 :where(p, li, figcaption) {
-	max-width: 65ch;
+	max-width: 90ch;
 	text-wrap: pretty;
 }
 
