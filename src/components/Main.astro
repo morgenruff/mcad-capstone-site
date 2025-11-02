@@ -301,12 +301,10 @@ import videoSlide from "../assets/images/video-slide.png";
             <div class="video-header">
                 <p class="video-title">Project Walkthrough</p>
                 <Image
+                    class="video-embed"
                     src={videoSlide}
                     alt="Yellow textured slide with the word video in the center."
                 />
-            </div>
-            <div class="video-text">
-                <p class="video-description">FPO</p>
             </div>
         </div>
         <div class="references" id="references">
@@ -328,33 +326,42 @@ import videoSlide from "../assets/images/video-slide.png";
         padding: 0 1rem;
     }
     p {
-        font-family: var(--f-spectral-med);
+        font-family: var(--f-diatype);
         font-size: 1.35rem;
         line-height: 1.35;
         color: var(--c-dkblue);
+        ~ ul {
+            margin: 0.5rem 0;
+            font-family: var(--f-diatype);
+            font-size: 1.35rem;
+            line-height: 1.35;
+            color: var(--c-dkblue);
+            padding-inline-start: 1.8rem;
+            list-style-type: "—  ";
+            list-style-position: outside;
+        }
     }
+    /* anchor links */
     .anchors {
         font-family: var(--f-fjalla);
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: var(--c-dkblue);
         padding: 1rem;
         border-block-end: 1px dashed var(--c-dkblue);
-        & ul {
-            margin: 0;
-            padding: 1rem 10rem;
+        > ul {
+            padding: 1rem;
             display: flex;
-            justify-content: space-between;
+            gap: 3rem;
             flex-direction: row;
-            position: sticky;
-            & li {
-                & a {
+            justify-content: center;
+            > li {
+                > a {
                     padding: 0.75rem;
                     border-radius: 12px;
                     border: 1px dashed var(--c-dkblue);
                     text-decoration: none;
                     &:hover {
                         background-color: var(--c-neonyellow);
-                        border: 1px dashed var(--c-dkblue);
                     }
                 }
             }
