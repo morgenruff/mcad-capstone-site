@@ -224,6 +224,14 @@
 
 /* color + typography  */
 
+/* diatype semi-mono variable */
+@font-face {
+    font-family: 'Diatype Semi-Mono';
+    font-style: normal;
+    font-display: swap;
+    src: url(../assets/fonts/ABCDiatypeSemi-MonoVariableEdu-Regular.woff2);
+}
+
 /* spectral-latin-500-normal */
 @font-face {
   font-family: 'Spectral 500';
@@ -280,6 +288,7 @@
 	--f-spectral-medital: 'Spectral Ital 500', system-ui;
 	--f-spectral-boldital: 'Spectral Ital 800', system-ui;
 	--f-fjalla: 'Fjalla One', system-ui;
+	--f-diatype: 'Diatype Semi-Mono', system-ui;
 	--c-dkblue: oklch(0.178 0.0307 263.05);
 	--c-mustard: oklch(0.8234 0.1428 73.43);
 	--c-neonyellow: oklch(0.9576 0.2086 113.79);
