@@ -2,6 +2,16 @@
 import "../styles/main.css";
 import { Image } from "astro:assets";
 import videoSlide from "../assets/images/video-slide.png";
+import wgmScr from "../assets/images/wgm-20251102.png";
+import earlyInspo from "../assets/images/morgen-ruff-capstone-project-inspiration.png";
+import moodboard from "../assets/images/morgen-ruff-capstone-moodboard.png";
+import typeColor from "../assets/images/wgm-type-color-nov-2025-v3.png";
+import wireHome from "../assets/images/wire-homepage-20251102.png";
+import wireAbout from "../assets/images/wire-about-20251102.png";
+import hifiHome from "../assets/images/homepage-20251102.png";
+import hifiAbout from "../assets/images/about-20251102.png";
+import hifiVisit from "../assets/images/visit-20251102.png";
+import hifiNews from "../assets/images/news & events-20251102.png";
 ---
 
 <div id="container">
@@ -19,28 +29,22 @@ import videoSlide from "../assets/images/video-slide.png";
                 <p class="hook">
                     A new internet home for the Weavers Guild of Minnesota
                     (WGM), one of the state’s longest-running arts nonprofits,
-                    founded in 1940. This project aims to represent, via the
-                    web, the full breadth and depth of WGM’s vital work
-                    preserving and advancing the arts of weaving, spinning, and
-                    dyeing. Through engaging, welcoming design, a modern,
-                    resilient tech stack based on Wordpress, and a
-                    user-friendly, accessible approach to communicating
+                    founded in 1940 by a group of textile weavers led by Hilma
+                    Berglund. Offering robust, year-round classes & workshops on
+                    many handmade textile weaving, spinning, and dyeing methods,
+                    WGM &mdash; and organizations like it all over the country
+                    &mdash; is a critical lifeline in the fight against
+                    industrial textile processes and consumption patterns that
+                    play a large part in advancing climate crisis. This project
+                    aims to represent, via the web, the full breadth and depth
+                    of WGM’s vital work preserving and advancing the arts of
+                    weaving, spinning, and dyeing. Through engaging, welcoming
+                    design, a modern, resilient tech stack based on Wordpress,
+                    and a user-friendly, accessible approach to communicating
                     information from WGM to its present and future audiences,
                     this new website will lay a foundation for WGM’s next decade
                     as the organization navigates an exciting period of growth
                     and expansion.
-                </p>
-                <p class="description1">
-                    The Weavers Guild of Minnesota (WGM), a nonprofit
-                    organization based in Minneapolis and founded in 1940 by
-                    textile weaver and artist Hilma Berglund, occupies am unique
-                    place within the art/craft landscape in the US. Offering
-                    robust, year-round classes & workshops on many handmade
-                    textile weaving, spinning, and dyeing methods, WGM &mdash;
-                    and organizations like it all over the country &mdash; is a
-                    critical lifeline in the fight against industrial textile
-                    processes and consumption patterns that play a large part in
-                    advancing climate crisis.
                 </p>
             </div>
         </div>
@@ -57,6 +61,12 @@ import videoSlide from "../assets/images/video-slide.png";
         <div class="problem" id="problem">
             <div class="problem-header">
                 <p class="problem-title">Problem</p>
+                <div class="header-images">
+                    <Image
+                        src={wgmScr}
+                        alt="Screenshot of the Weavers Guild of Minnesota homepage."
+                    />
+                </div>
             </div>
             <div class="problem-text">
                 <p class="problem-description">
@@ -97,6 +107,13 @@ import videoSlide from "../assets/images/video-slide.png";
         <div class="concept" id="concept">
             <div class="concept-header">
                 <p class="concept-title">Concept</p>
+                <div class="header-images">
+                    <Image
+                        src={earlyInspo}
+                        alt="Bright inspiration moodboard."
+                    />
+                    <Image src={moodboard} alt="Restrained WGM moodboard." />
+                </div>
             </div>
             <div class="concept-text">
                 <p class="concept-description">
@@ -116,6 +133,9 @@ import videoSlide from "../assets/images/video-slide.png";
         <div class="data" id="research">
             <div class="data-header">
                 <p class="data-title">Collected Data & Research</p>
+                <div class="header-images">
+                    <!-- <Image src={} alt="." /> -->
+                </div>
             </div>
             <div class="data-text">
                 <p class="data-description">
@@ -159,11 +179,18 @@ import videoSlide from "../assets/images/video-slide.png";
                         </li>
                     </ul>
                 </p>
+                <p class="data-description">
+                    See references & research sources at the end of this page.
+                </p>
             </div>
         </div>
         <div class="process" id="process">
             <div class="process-header">
                 <p class="process-title">Process</p>
+                <div class="header-images">
+                    <Image src={typeColor} alt="Brand guidelines for WGM." />
+                    <Image src={wireHome} alt="Wireframe of a homepage." />
+                </div>
             </div>
             <div class="process-text">
                 <p class="process-description">
@@ -188,16 +215,18 @@ import videoSlide from "../assets/images/video-slide.png";
                 <p class="process-description">
                     First, I spent some time gathering all of the content (text,
                     images, video, etc.) on the current WGM site, and put it all
-                    into a very long document. From there, I assessed the state
-                    of the text content and in collaboration with my partners at
-                    WGM, set about re-organizing the site and condensing
-                    disparate information down into more meaningful groups,
-                    thereby setting up a situation where the new site could have
-                    fewer — but individually richer — pages. This makes
-                    navigating the site much easier. We shifted from more
-                    academic language to more action-oriented wording to
-                    describe things one can do with the new site, simplifying
-                    the experience significantly.
+                    into a <a
+                        href="https://docs.google.com/document/d/1NferbwDcXmgKbl5hn4y4Nmx7NyS1naMfTcVSP28Ll5k/edit?usp=sharing"
+                        >very long document</a
+                    >. From there, I assessed the state of the text content and
+                    in collaboration with my partners at WGM, set about
+                    re-organizing the site and condensing disparate information
+                    down into more meaningful groups, thereby setting up a
+                    situation where the new site could have fewer — but
+                    individually richer — pages. This makes navigating the site
+                    much easier. We shifted from more academic language to more
+                    action-oriented wording to describe things one can do with
+                    the new site, simplifying the experience significantly.
                 </p>
                 <p class="process-description">
                     Then, onto new branding. As mentioned before, WGM’s new
@@ -387,20 +416,29 @@ import videoSlide from "../assets/images/video-slide.png";
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         border-block-end: 2px dashed var(--c-dkblue);
-        padding: 1rem 0;
+        padding: 2rem 1rem;
     }
     /* title column */
     .intro-header,
     .video-header,
-    .problem-header,
-    .concept-header,
-    .data-header,
-    .proces-header,
     .references-header {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, min-content);
         gap: 0.5rem;
+    }
+    .problem-header,
+    .concept-header,
+    .data-header {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        gap: 0.5rem;
+        align-items: end;
+    }
+    .header-images {
+        display: grid;
+        gap: 0.5rem;
+        align-self: end;
     }
     /* title text */
     .intro-title,
