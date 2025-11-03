@@ -59,16 +59,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </ul>
         </div>
         <div class="problem" id="problem">
-            <div class="problem-header">
-                <p class="problem-title">Problem</p>
-                <div class="header-images">
-                    <Image
-                        src={wgmScr}
-                        alt="Screenshot of the Weavers Guild of Minnesota homepage."
-                    />
-                </div>
+            <p class="title">Problem</p>
+            <div class="images">
+                <Image
+                    src={wgmScr}
+                    alt="Screenshot of the Weavers Guild of Minnesota homepage."
+                />
             </div>
-            <div class="problem-text">
+            <div class="text">
                 <p class="problem-description">
                     Web presence is vital for any business today — people have
                     to be able to find you to patronize you. But it’s especially
@@ -105,17 +103,12 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="concept" id="concept">
-            <div class="concept-header">
-                <p class="concept-title">Concept</p>
-                <div class="header-images">
-                    <Image
-                        src={earlyInspo}
-                        alt="Bright inspiration moodboard."
-                    />
-                    <Image src={moodboard} alt="Restrained WGM moodboard." />
-                </div>
+            <p class="title">Concept</p>
+            <div class="images">
+                <Image src={earlyInspo} alt="Bright inspiration moodboard." />
+                <Image src={moodboard} alt="Restrained WGM moodboard." />
             </div>
-            <div class="concept-text">
+            <div class="text">
                 <p class="concept-description">
                     This project’s goal is to refresh and enliven WGM’s web
                     presence, in the process doing justice to and appropriately
@@ -131,13 +124,11 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="data" id="research">
-            <div class="data-header">
-                <p class="data-title">Collected Data & Research</p>
-                <div class="header-images">
-                    <!-- <Image src={} alt="." /> -->
-                </div>
+            <p class="title">Collected Data & Research</p>
+            <div class="images">
+                <!-- <Image src={} alt="." /> -->
             </div>
-            <div class="data-text">
+            <div class="text">
                 <p class="data-description">
                     Since this project is not conceptual — in the sense that
                     it’s a client-based project with a real-world end goal of
@@ -185,14 +176,23 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="process" id="process">
-            <div class="process-header">
-                <p class="process-title">Process</p>
-                <div class="header-images">
-                    <Image src={typeColor} alt="Brand guidelines for WGM." />
-                    <Image src={wireHome} alt="Wireframe of a homepage." />
-                </div>
+            <p class="title">Process</p>
+            <div class="images">
+                <Image src={wireHome} alt="Wireframe of a homepage." />
+                <Image
+                    src={hifiHome}
+                    alt="Screenshot of the new WGM homepage."
+                />
+                <Image
+                    src={hifiAbout}
+                    alt="Screenshot of the new WGM homepage."
+                />
+                <Image
+                    src={hifiVisit}
+                    alt="Screenshot of the new WGM homepage."
+                />
             </div>
-            <div class="process-text">
+            <div class="text">
                 <p class="process-description">
                     This project started in a kind of gut-feeling place: the
                     knowledge that something about the WGM website was wrong,
@@ -253,6 +253,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     particular focus on readability. Typographic contrast was important
                     in coming to these choices.
                 </p>
+                <Image src={typeColor} alt="Brand guidelines for WGM." />
                 <p class="process-description">
                     Next, I dove into creating a wireframes of low-fidelity
                     versions of a few potential pages for a new site, working in
@@ -327,20 +328,22 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="video" id="walkthrough">
-            <div class="video-header">
-                <p class="video-title">Project Walkthrough</p>
+            <p class="title">Project Walkthrough</p>
+            <div class="images">
                 <Image
                     class="video-embed"
                     src={videoSlide}
                     alt="Yellow textured slide with the word video in the center."
                 />
             </div>
+            <div class="text">
+                <p class="video-description">FPO</p>
+            </div>
         </div>
         <div class="references" id="references">
-            <div class="references-header">
-                <p class="references-title">References</p>
-            </div>
-            <div class="references-text">
+            <p class="title">References</p>
+            <div class="images"></div>
+            <div class="text">
                 <p class="references-description">FPO</p>
             </div>
         </div>
@@ -404,8 +407,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             }
         }
     }
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        border-block-end: 2px dashed var(--c-dkblue);
+        padding: 2rem 1rem;
+    }
     /* entire section - full width */
-    .intro,
     .problem,
     .concept,
     .data,
@@ -414,61 +423,57 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .references {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-areas:
+            "title title"
+            "images text";
+        gap: 2rem;
         border-block-end: 2px dashed var(--c-dkblue);
         padding: 2rem 1rem;
     }
     /* title column */
-    .intro-header,
-    .video-header,
-    .references-header {
+    .intro-header {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, min-content);
         gap: 0.5rem;
+        font-family: var(--f-fjalla);
+        color: var(--c-dkblue);
     }
-    .problem-header,
-    .concept-header,
-    .data-header {
-        display: grid;
-        grid-template-rows: min-content 1fr;
-        gap: 0.5rem;
-        align-items: end;
+    .intro-title {
+        font-size: 2rem;
+        font-family: var(--f-fjalla);
+        color: var(--c-dkblue);
     }
-    .header-images {
+    .images {
         display: grid;
-        gap: 0.5rem;
-        align-self: end;
+        gap: 1rem;
+        grid-area: images;
     }
     /* title text */
-    .intro-title,
-    .problem-title,
-    .video-title,
-    .concept-title,
-    .data-title,
-    .process-title,
-    .references-title {
+    .title {
         font-family: var(--f-fjalla);
         font-size: 2rem;
         color: var(--c-dkblue);
+        grid-area: title;
     }
     /* subtitle text */
     .intro-name,
     .intro-program,
     .intro-date {
-        font-family: var(--f-fjalla);
         font-size: 1.5rem;
+        font-family: var(--f-fjalla);
         color: var(--c-dkblue);
     }
     /* text area column right / row bottom */
-    .intro-text,
-    .problem-text,
-    .video-text,
-    .concept-text,
-    .data-text,
-    .process-text,
-    .references-text {
+    .intro-text {
         display: grid;
-        gap: 0.5rem;
+        gap: 1rem;
+    }
+    .text {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: repeat(10, min-content);
+        align-items: start;
+        grid-area: text;
     }
 </style>
