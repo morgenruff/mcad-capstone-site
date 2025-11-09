@@ -2,16 +2,25 @@
 import Navigation from "../components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/main.css";
 ---
 
 <MainLayout>
     <Navigation />
-    <p>FPO</p>
+    <main>
+        <h2>References</h2>
+        <div class="references-wrapper">
+            
+        </div>
+    </main>
     <Footer />
 </MainLayout>
 
 <style>
     html {
         background: var(--hdr-gradient);
+    }
+    main {
+        padding: 1rem;
     }
 </style>
