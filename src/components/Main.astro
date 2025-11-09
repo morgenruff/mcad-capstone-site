@@ -377,6 +377,13 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 color: var(--c-neonyellow);
             }
         }
+        & a {
+            text-decoration: underline dashed var(--c-neonyellow) 2px;
+            text-underline-offset: 4px;
+            &::after {
+                content: " \1F86D";
+            }
+        }
         a:hover {
             color: var(--c-neonyellow);
         }
