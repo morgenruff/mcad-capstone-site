@@ -35,16 +35,16 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     WGM &mdash; and organizations like it all over the country
                     &mdash; is a critical lifeline in the fight against
                     industrial textile processes and consumption patterns that
-                    play a large part in advancing climate crisis. This project
-                    aims to represent, via the web, the full breadth and depth
-                    of WGM’s vital work preserving and advancing the arts of
-                    weaving, spinning, and dyeing. Through engaging, welcoming
-                    design, a modern, resilient tech stack based on Wordpress,
-                    and a user-friendly, accessible approach to communicating
-                    information from WGM to its present and future audiences,
-                    this new website will lay a foundation for WGM’s next decade
-                    as the organization navigates an exciting period of growth
-                    and expansion.
+                    play a large part in advancing the climate crisis. This
+                    project aims to represent, via the web, the full breadth and
+                    depth of WGM’s vital work preserving and advancing the arts
+                    of weaving, spinning, and dyeing. Through engaging,
+                    welcoming design, a modern, resilient tech stack based on
+                    Wordpress, and a user-friendly, accessible approach to
+                    communicating information from WGM to its present and future
+                    audiences, this new website will lay a foundation for WGM’s
+                    next decade as the organization navigates an exciting period
+                    of growth and expansion.
                 </p>
             </div>
         </div>
@@ -355,46 +355,47 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         height: 100%;
     }
     main {
-        padding: 0 1rem;
+        padding: 0;
     }
     p {
         font-family: var(--f-diatype);
         font-weight: 500;
         font-size: 1.35rem;
         line-height: 1.35;
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
         ~ ul {
             margin: 0.5rem 0;
             font-family: var(--f-diatype);
             font-weight: 500;
             font-size: 1.35rem;
             line-height: 1.35;
-            color: var(--c-dkblue);
+            color: var(--c-onyx);
             padding-inline-start: 2rem;
             list-style-type: "—  ";
             list-style-position: outside;
             li a:hover {
-                color: var(--c-neonyellow);
+                color: var(--c-goldenrod);
             }
         }
         & a {
-            text-decoration: underline dashed var(--c-neonyellow) 2px;
+            text-decoration: underline solid var(--c-goldenrod) 2px;
             text-underline-offset: 4px;
             &::after {
                 content: " \1F86D";
             }
         }
         a:hover {
-            color: var(--c-neonyellow);
+            color: var(--c-goldenrod);
         }
     }
     /* anchor links */
     .anchors {
         font-family: var(--f-fjalla);
         font-size: 1.5rem;
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
         padding: 2rem 1rem;
-        border-block-end: 2px dashed var(--c-dkblue);
+        border-block-end: 2px solid var(--c-onyx);
+        background: var(--c-lavender);
         > ul {
             padding: 1rem;
             display: flex;
@@ -405,10 +406,10 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 > a {
                     padding: 0.75rem;
                     border-radius: 12px;
-                    border: 1px dashed var(--c-dkblue);
+                    border: 1px solid var(--c-onyx);
                     text-decoration: none;
                     &:hover {
-                        background-color: var(--c-neonyellow);
+                        background-color: var(--c-goldenrod);
                     }
                 }
             }
@@ -418,8 +419,9 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        border-block-end: 2px dashed var(--c-dkblue);
+        border-block-end: 2px solid var(--c-onyx);
         padding: 2rem 1rem;
+        background: white;
     }
     /* entire section - full width */
     .problem,
@@ -434,7 +436,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "title title"
             "images text";
         gap: 2rem;
-        border-block-end: 2px dashed var(--c-dkblue);
+        border-block-end: 2px solid var(--c-onyx);
         padding: 2rem 1rem;
     }
     /* title column */
@@ -444,12 +446,12 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         grid-template-rows: repeat(4, min-content);
         gap: 0.5rem;
         font-family: var(--f-fjalla);
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
     }
     .intro-title {
         font-size: 2rem;
         font-family: var(--f-fjalla);
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
     }
     .images {
         display: grid;
@@ -460,7 +462,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .title {
         font-family: var(--f-fjalla);
         font-size: 2rem;
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
         grid-area: title;
     }
     /* subtitle text */
@@ -469,7 +471,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .intro-date {
         font-size: 1.5rem;
         font-family: var(--f-fjalla);
-        color: var(--c-dkblue);
+        color: var(--c-onyx);
     }
     /* text area column right / row bottom */
     .intro-text {

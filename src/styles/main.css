@@ -293,11 +293,18 @@
 	--c-mustard: oklch(0.8234 0.1428 73.43);
 	--c-neonyellow: oklch(0.9576 0.2086 113.79);
 	--c-jetstream: oklch(0.9065 0.0307 183.63);
+	--c-seafoam: oklch(55% 14% 205deg);
+	--c-indigo: oklch(41% 43% 270deg);
+	--c-lavender: oklch(72% 27% 293deg);
+	--c-madder: oklch(41% 41% 24deg);
+	--c-pinkish: oklch(74% 38% 20deg);
+	--c-goldenrod: oklch(82% 42% 91deg);
+	--c-onyx: oklch(25% 12% 108deg);
 	--hdr-gradient: radial-gradient(
 		farthest-side circle at 50% 150% in oklch,
-		oklch(65% 0.09 168),
-		oklch(80% 0.05 145),
-		oklch(80% 0.08 87)
+		var(--c-indigo),
+		var(--c-lavender),
+		var(--c-onyx)
 	);
 	--sdr-gradient: radial-gradient(
 		farthest-side circle at 50% 150%,
