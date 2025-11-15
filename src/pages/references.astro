@@ -293,37 +293,37 @@ import "../styles/main.css";
 
 <style>
     html {
-        background: var(--hdr-gradient);
+        background: var(--c-lavender);
     }
     main {
-        padding: 0 1rem;
+        padding: var(--step-0) 0 0 0;
     }
     h2 {
         font-family: var(--f-fjalla);
-        font-size: 2rem;
-        color: var(--c-dkblue);
-        margin: 1rem 0;
+        font-size: var(--step-1);
+        color: var(--c-onyx);
+        margin: 0 var(--step-0);
     }
     .references-wrapper {
-        padding-block-end: 2rem;
-        border-bottom: 2px dashed var(--c-dkblue);
+        padding: var(--step-0);
+        border-block-end: 2px solid var(--c-onyx);
     }
     .references-wrapper ul {
         display: flex;
         flex-direction: column;
-        gap: 1.35rem;
+        gap: var(--step-0);
         /*max-width: 110ch;*/
         & li {
             font-family: var(--f-diatype);
             font-weight: 500;
-            font-size: 1.35rem;
+            font-size: var(--step-0);
             line-height: 1.35;
-            color: var(--c-dkblue);
+            color: var(--c-onyx);
             & a {
-                text-decoration: underline dashed var(--c-neonyellow) 2px;
+                text-decoration: underline dashed var(--c-goldenrod) 2px;
                 text-underline-offset: 4px;
                 &:hover {
-                    color: var(--c-neonyellow);
+                    color: var(--c-goldenrod);
                 }
                 &::after {
                     content: " \1F86D";
