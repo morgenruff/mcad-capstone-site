@@ -54,8 +54,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 <li><a href="#concept">Concept</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#process">Process</a></li>
-                <li><a href="#walkthrough">Walkthrough</a></li>
-                <li><a href="#references">References</a></li>
+                <li><a href="#walkthrough">Presentation</a></li>
             </ul>
         </div>
         <div class="problem" id="problem">
@@ -114,7 +113,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     presence, in the process doing justice to and appropriately
                     representing the organization’s community work. Without
                     doubt, we need a new brand color palette and a new suite of
-                    typography based in personality and legibility — in both
+                    typography based in personality and legibility — in both
                     cases, we should strive for fun, approachability, and
                     choices that have staying power. WGM has plenty of
                     visually-interesting work going on every day, so we also
@@ -130,9 +129,9 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
             <div class="text">
                 <p class="data-description">
-                    Since this project is not conceptual — in the sense that
+                    Since this project is not conceptual — in the sense that
                     it’s a client-based project with a real-world end goal of
-                    live website deployment — my project research mainly focused
+                    live website deployment — my project research mainly focused
                     on similar, recently-refreshed or -launched websites in
                     roughly the same business space, along with nuts-and-bolts
                     web design & development resources to improve things like
@@ -155,7 +154,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                             readability and existing WGM audience demographics
                         </li>
                         <li>
-                            information-related input — for example, which
+                            information-related input — for example, which
                             pieces of information fit within an ideal hierarchy
                             when building the site, for both existing and new
                             users
@@ -222,8 +221,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     in collaboration with my partners at WGM, set about
                     re-organizing the site and condensing disparate information
                     down into more meaningful groups, thereby setting up a
-                    situation where the new site could have fewer — but
-                    individually richer — pages. This makes navigating the site
+                    situation where the new site could have fewer — but
+                    individually richer — pages. This makes navigating the site
                     much easier. We shifted from more academic language to more
                     action-oriented wording to describe things one can do with
                     the new site, simplifying the experience significantly.
@@ -307,7 +306,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                         </li>
                         <li>
                             New e-commerce functionality via WooCommerce
-                            — currently the only online transactions WGM
+                            — currently the only online transactions WGM
                             processes are annual membership fees, done through
                             Membee with PayPal as payment processor
                         </li>
@@ -318,7 +317,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     <a href="https://picostrap.com/" target="_blank"
                         >Picostrap</a
                     > as a starter theme that I’ll tweak heavily to align with my
-                    Figma designs — by starting with Picostrap, I’ll already have
+                    Figma designs — by starting with Picostrap, I’ll already have
                     some crucial performance considerations in place. In terms of
                     development process, I’ll rough out pages based on my Figma designs,
                     then share with a larger group of internal stakeholders for testing
@@ -353,17 +352,17 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     p {
         font-family: var(--f-diatype);
         font-weight: 500;
-        font-size: 1.35rem;
+        font-size: var(--step-0);
         line-height: 1.35;
         color: var(--c-onyx);
         ~ ul {
             margin: 0.5rem 0;
             font-family: var(--f-diatype);
             font-weight: 500;
-            font-size: 1.35rem;
+            font-size: var(--step-0);
             line-height: 1.35;
             color: var(--c-onyx);
-            padding-inline-start: 2rem;
+            padding-inline-start: var(--step-2);
             list-style-type: "—  ";
             list-style-position: outside;
             li a:hover {
@@ -372,7 +371,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         }
         & a,
         ul li a {
-            text-decoration: underline solid var(--c-goldenrod) 2px;
+            text-decoration: underline dotted var(--c-goldenrod) 2px;
             text-underline-offset: 4px;
             &::after {
                 content: " \1F86D";
@@ -383,23 +382,42 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         }
     }
     /* anchor links */
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "intro-header intro-text";
+        gap: var(--step-1);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        background: var(--c-lavender);
+    }
+    @media screen and (width <= 900px) {
+        .intro {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, fit-content);
+            grid-template-areas:
+                "intro-header"
+                "intro-text";
+        }
+    }
     .anchors {
         font-family: var(--f-fjalla);
-        font-size: 1.5rem;
+        font-size: var(--step-0);
         color: var(--c-onyx);
-        padding: 1rem;
+        padding: var(--step-0);
         border-block-end: 1px solid var(--c-onyx);
         background: var(--c-lavender);
         > ul {
-            padding: 1rem;
+            padding: var(--step-0);
             display: flex;
-            gap: 3rem;
+            gap: 0.5rem;
             flex-direction: row;
             justify-content: center;
             > li {
                 > a {
                     padding: 0.75rem;
-                    border-radius: 12px;
+                    border-radius: 1rem;
                     border: 1px solid var(--c-onyx);
                     text-decoration: none;
                     &:hover {
@@ -408,14 +426,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 }
             }
         }
-    }
-    .intro {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        border-block-end: 1px solid var(--c-onyx);
-        padding: 2rem 1rem;
-        background: white;
     }
     /* entire section - full width */
     .problem,
@@ -435,6 +445,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     /* title column */
     .intro-header {
+        grid-area: intro-header;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, min-content);
@@ -443,7 +454,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         color: var(--c-onyx);
     }
     .intro-title {
-        font-size: 2rem;
+        font-size: var(--step-2);
         font-family: var(--f-fjalla);
         color: var(--c-onyx);
     }
@@ -455,7 +466,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     /* title text */
     .title {
         font-family: var(--f-fjalla);
-        font-size: 2rem;
+        font-size: var(--step-1);
         color: var(--c-onyx);
         grid-area: title;
     }
@@ -463,12 +474,13 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .intro-name,
     .intro-program,
     .intro-date {
-        font-size: 1.5rem;
+        font-size: var(--step-1);
         font-family: var(--f-fjalla);
         color: var(--c-onyx);
     }
     /* text area column right / row bottom */
     .intro-text {
+        grid-area: intro-text;
         display: grid;
         gap: 1rem;
     }
