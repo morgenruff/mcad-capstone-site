@@ -3,6 +3,7 @@ import "../styles/main.css";
 import { Image } from "astro:assets";
 import videoSlide from "../assets/images/video-slide.png";
 import wgmScr from "../assets/images/wgm-20251102.png";
+import wgmFull from "../assets/images/wgm-homepage-full.png";
 import earlyInspo from "../assets/images/morgen-ruff-capstone-project-inspiration.png";
 import moodboard from "../assets/images/morgen-ruff-capstone-moodboard.png";
 import typeColor from "../assets/images/wgm-type-color-nov-2025-v3.png";
@@ -16,14 +17,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
 
 <div id="container">
     <main>
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="intro-header">
                 <p class="intro-title">
                     A New Internet Home for the Weavers Guild of Minnesota
                 </p>
                 <p class="intro-name">Morgen Ruff</p>
                 <p class="intro-program">MCAD MA in Graphic &amp; Web Design</p>
-                <p class="intro-date">Fall 2025</p>
+                <p class="intro-date">Capstone &mdash; Fall 2025</p>
             </div>
             <div class="intro-text">
                 <p class="hook">
@@ -58,16 +59,22 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </ul>
         </div>
         <div class="problem" id="problem">
-            <p class="title">Problem</p>
-            <div class="images">
-                <Image
-                    src={wgmScr}
-                    alt="Screenshot of the Weavers Guild of Minnesota homepage."
-                />
+            <p class="problem-title title">Problem</p>
+            <div class="problem-images">
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={wgmFull}
+                        alt="Screenshot of the Weavers Guild of Minnesota homepage."
+                    />
+                    <figcaption>
+                        <p>The WGM site as of November 2025.</p>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="text">
+            <div class="problem-text">
                 <p class="problem-description">
-                    Web presence is vital for any business today — people have
+                    Web presence is vital for any business today — people have
                     to be able to find you to patronize you. But it’s especially
                     important for arts nonprofits, which often lack funding for
                     major advertising campaigns or staff bandwidth to create
@@ -245,7 +252,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                         target="_blank">Quintana Type</a
                     > provides large headings and major focus points. The designed-for-accessibility,
                     highly functional yet funky sans serif typeface Inclusive Sans
-                    by <a
+                    by
+                    <a
                         href="https://www.oliviaking.com/inclusivesans/feature"
                         target="_blank">Olivia King</a
                     > provides all body text and smaller inline headings, with a
@@ -305,10 +313,10 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                             afterwards
                         </li>
                         <li>
-                            New e-commerce functionality via WooCommerce
-                            — currently the only online transactions WGM
-                            processes are annual membership fees, done through
-                            Membee with PayPal as payment processor
+                            New e-commerce functionality via WooCommerce —
+                            currently the only online transactions WGM processes
+                            are annual membership fees, done through Membee with
+                            PayPal as payment processor
                         </li>
                     </ul>
                 </p>
@@ -340,155 +348,187 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
     </main>
-</div>
 
-<style>
-    #container {
-        height: 100%;
-    }
-    main {
-        padding: 0;
-    }
-    p {
-        font-family: var(--f-diatype);
-        font-weight: 500;
-        font-size: var(--step-0);
-        line-height: 1.35;
-        color: var(--c-onyx);
-        ~ ul {
-            margin: 0.5rem 0;
+    <style>
+        #container {
+            height: 100%;
+        }
+        /* core styles */
+        main {
+            padding: 0;
+        }
+        p {
             font-family: var(--f-diatype);
             font-weight: 500;
             font-size: var(--step-0);
             line-height: 1.35;
             color: var(--c-onyx);
-            padding-inline-start: var(--step-2);
-            list-style-type: "—  ";
-            list-style-position: outside;
-            li a:hover {
+            ~ ul {
+                margin: 0.5rem 0;
+                font-family: var(--f-diatype);
+                font-weight: 500;
+                font-size: var(--step-0);
+                line-height: 1.35;
+                color: var(--c-onyx);
+                padding-inline-start: var(--step-2);
+                list-style-type: "—  ";
+                list-style-position: outside;
+                li a:hover {
+                    color: var(--c-goldenrod);
+                }
+            }
+            & a,
+            ul li a {
+                text-decoration: underline dotted var(--c-goldenrod) 2px;
+                text-underline-offset: 4px;
+                &::after {
+                    content: " \1F86D";
+                }
+            }
+            a:hover {
                 color: var(--c-goldenrod);
             }
         }
-        & a,
-        ul li a {
-            text-decoration: underline dotted var(--c-goldenrod) 2px;
-            text-underline-offset: 4px;
-            &::after {
-                content: " \1F86D";
-            }
-        }
-        a:hover {
-            color: var(--c-goldenrod);
-        }
-    }
-    /* anchor links */
-    .intro {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: "intro-header intro-text";
-        gap: var(--step-1);
-        border-block-end: 1px solid var(--c-onyx);
-        padding: var(--step-1) var(--step-0);
-        background: var(--c-lavender);
-    }
-    @media screen and (width <= 900px) {
+        /* intro section */
         .intro {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, fit-content);
-            grid-template-areas:
-                "intro-header"
-                "intro-text";
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: "intro-header intro-text";
+            gap: var(--step-0);
+            border-block-end: 1px solid var(--c-onyx);
+            padding: var(--step-1) var(--step-0);
+            background: var(--c-lavender);
         }
-    }
-    .anchors {
-        font-family: var(--f-fjalla);
-        font-size: var(--step-0);
-        color: var(--c-onyx);
-        padding: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
-        background: var(--c-lavender);
-        > ul {
+        .intro-header {
+            grid-area: intro-header;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, min-content);
+            gap: calc (var(--step-0) / 2);
+            font-family: var(--f-fjalla);
+        }
+        .intro-title {
+            font-size: var(--step-2);
+            font-family: var(--f-fjalla);
+        }
+        .intro-name,
+        .intro-program,
+        .intro-date {
+            font-size: var(--step-1);
+            font-family: var(--f-fjalla);
+        }
+        .intro-text {
+            grid-area: intro-text;
+        }
+        /* anchor links */
+        .anchors {
+            font-family: var(--f-fjalla);
+            font-size: var(--step-0);
+            color: var(--c-onyx);
             padding: var(--step-0);
-            display: flex;
-            gap: 0.5rem;
-            flex-direction: row;
-            justify-content: center;
-            > li {
-                > a {
-                    padding: 0.75rem;
-                    border-radius: 1rem;
-                    border: 1px solid var(--c-onyx);
-                    text-decoration: none;
-                    &:hover {
-                        background-color: var(--c-goldenrod);
+            border-block-end: 1px solid var(--c-onyx);
+            background: var(--c-lavender);
+            > ul {
+                padding: var(--step-0);
+                display: flex;
+                gap: calc(var(--step-0) / 2);
+                flex-direction: row;
+                justify-content: center;
+                > li {
+                    > a {
+                        padding: 0.75rem;
+                        border-radius: 1rem;
+                        border: 1px solid var(--c-onyx);
+                        text-decoration: none;
+                        &:hover {
+                            background-color: var(--c-goldenrod);
+                        }
                     }
                 }
             }
         }
-    }
-    /* entire section - full width */
-    .problem,
-    .concept,
-    .data,
-    .process,
-    .video {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "title title"
-            "images text";
-        gap: 2rem;
-        border-block-end: 1px solid var(--c-onyx);
-        padding: 2rem 1rem;
-        background: white;
-    }
-    /* title column */
-    .intro-header {
-        grid-area: intro-header;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, min-content);
-        gap: 0.5rem;
-        font-family: var(--f-fjalla);
-        color: var(--c-onyx);
-    }
-    .intro-title {
-        font-size: var(--step-2);
-        font-family: var(--f-fjalla);
-        color: var(--c-onyx);
-    }
-    .images {
-        display: grid;
-        gap: 1rem;
-        grid-area: images;
-    }
-    /* title text */
-    .title {
-        font-family: var(--f-fjalla);
-        font-size: var(--step-1);
-        color: var(--c-onyx);
-        grid-area: title;
-    }
-    /* subtitle text */
-    .intro-name,
-    .intro-program,
-    .intro-date {
-        font-size: var(--step-1);
-        font-family: var(--f-fjalla);
-        color: var(--c-onyx);
-    }
-    /* text area column right / row bottom */
-    .intro-text {
-        grid-area: intro-text;
-        display: grid;
-        gap: 1rem;
-    }
-    .text {
-        display: grid;
-        gap: 1rem;
-        grid-template-rows: repeat(10, min-content);
-        align-items: start;
-        grid-area: text;
-    }
-</style>
+        /* entire section - full width */
+        .concept,
+        .data,
+        .process,
+        .video {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "title title"
+                "images text";
+            gap: 2rem;
+            border-block-end: 1px solid var(--c-onyx);
+            padding: 2rem 1rem;
+            background: white;
+        }
+        /* problem section styling */
+        .problem {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+                "problem-title problem-title"
+                "problem-text problem-images";
+            gap: var(--step-0);
+            border-block-end: 1px solid var(--c-onyx);
+            padding: var(--step-1) var(--step-0);
+            background: white;
+        }
+        .problem-title {
+            grid-area: problem-title;
+        }
+        .problem-text {
+            grid-area: problem-text;
+            display: grid;
+            gap: calc(var(--step-0) / 2);
+            align-content: start;
+        }
+        .problem-images {
+            grid-area: problem-images;
+            overflow: scroll;
+        }
+        .tall-image {
+            overflow: scroll;
+            border: 1px solid var(--c-onyx);
+        }
+        .images {
+            display: grid;
+            gap: var(--step-0);
+            grid-area: images;
+        }
+        /* title text */
+        .title {
+            font-family: var(--f-fjalla);
+            font-size: var(--step-2);
+            color: var(--c-onyx);
+        }
+        .text {
+            display: grid;
+            gap: 1rem;
+            grid-template-rows: repeat(10, min-content);
+            align-items: start;
+            grid-area: text;
+        }
+
+        /* small width styles */
+        @media screen and (width <= 900px) {
+            .intro {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, min-content);
+                grid-template-areas:
+                    "intro-header"
+                    "intro-text";
+            }
+            .problem {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, min-content);
+                grid-template-areas:
+                    "problem-title"
+                    "problem-text"
+                    "problem-images";
+            }
+        }
+    </style>
+</div>
