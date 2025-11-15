@@ -65,7 +65,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     <Image
                         class="tall-image"
                         src={wgmFull}
-                        alt="Screenshot of the Weavers Guild of Minnesota homepage."
+                        alt="Screenshot of the Weavers Guild of Minnesota homepage, November 2025."
                     />
                     <figcaption>
                         <p>The WGM site as of November 2025.</p>
@@ -105,6 +105,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     important consideration is that WGM wants to continue using
                     the Wordpress CMS as core staff are well-trained in using
                     it.
+                </p>
+                <p class="problem-description">
+                    Note in the screenshot here that the site uses a hodge-podge
+                    of styling, with <code>iframe</code> embeds for certain content,
+                    mismatched columns, odd/inconsistent spacing, and other small
+                    problems. The site navigation is cluttered and hard to parse.
+                    And finally, for an organization that's focused on such visual
+                    crafts, there is a surprising lack of images.
                 </p>
             </div>
         </div>
@@ -356,6 +364,18 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         /* core styles */
         main {
             padding: 0;
+        }
+        code {
+            font-family: monospace;
+            font-size: calc(var(--step-0) / 1.2);
+            background: var(--c-goldenrod);
+            padding: calc(var(--step-0) / 4);
+            border-radius: calc(var(--step-0) / 2);
+        }
+        figcaption p {
+            font-size: calc(var(--step-0) * 0.75);
+            text-align: right;
+            margin-block-start: calc(var(--step-0) / 2);
         }
         p {
             font-family: var(--f-diatype);
