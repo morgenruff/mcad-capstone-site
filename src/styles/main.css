@@ -300,16 +300,8 @@
 	--c-pinkish: oklch(74% 38% 20deg);
 	--c-goldenrod: oklch(82% 42% 91deg);
 	--c-onyx: oklch(25% 12% 108deg);
-	--hdr-gradient: radial-gradient(
-		farthest-side circle at 50% 150% in oklch,
-		var(--c-indigo),
-		var(--c-lavender),
-		var(--c-onyx)
-	);
-	--sdr-gradient: radial-gradient(
-		farthest-side circle at 50% 150%,
-		#52a185,
-		#aac7aa,
-		#d4bb82
-	);
+	/* @link https://utopia.fyi/type/calculator?c=360,16,1.333,1600,24,1.333,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step-0: clamp(1rem, 0.8548rem + 0.6452vw, 1.5rem);
+    --step-1: clamp(1.333rem, 1.1395rem + 0.86vw, 1.9995rem);
+    --step-2: clamp(1.7769rem, 1.519rem + 1.1464vw, 2.6653rem);
 }

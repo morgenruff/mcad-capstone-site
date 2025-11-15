@@ -340,13 +340,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 <p class="video-description">FPO</p>
             </div>
         </div>
-        <div class="references" id="references">
-            <p class="title">References</p>
-            <div class="images"></div>
-            <div class="text">
-                <p class="references-description">FPO</p>
-            </div>
-        </div>
     </main>
 </div>
 
@@ -377,7 +370,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 color: var(--c-goldenrod);
             }
         }
-        & a {
+        & a,
+        ul li a {
             text-decoration: underline solid var(--c-goldenrod) 2px;
             text-underline-offset: 4px;
             &::after {
@@ -393,8 +387,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         font-family: var(--f-fjalla);
         font-size: 1.5rem;
         color: var(--c-onyx);
-        padding: 2rem 1rem;
-        border-block-end: 2px solid var(--c-onyx);
+        padding: 1rem;
+        border-block-end: 1px solid var(--c-onyx);
         background: var(--c-lavender);
         > ul {
             padding: 1rem;
@@ -419,7 +413,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        border-block-end: 2px solid var(--c-onyx);
+        border-block-end: 1px solid var(--c-onyx);
         padding: 2rem 1rem;
         background: white;
     }
@@ -428,16 +422,16 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .concept,
     .data,
     .process,
-    .video,
-    .references {
+    .video {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "title title"
             "images text";
         gap: 2rem;
-        border-block-end: 2px solid var(--c-onyx);
+        border-block-end: 1px solid var(--c-onyx);
         padding: 2rem 1rem;
+        background: white;
     }
     /* title column */
     .intro-header {
