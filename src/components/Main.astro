@@ -117,12 +117,36 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="concept" id="concept">
-            <p class="title">Concept</p>
-            <div class="images">
-                <Image src={earlyInspo} alt="Bright inspiration moodboard." />
-                <Image src={moodboard} alt="Restrained WGM moodboard." />
+            <p class="concept-title title">Concept</p>
+            <div class="concept-images">
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={earlyInspo}
+                        alt="Bright inspiration moodboard."
+                    />
+                    <figcaption>
+                        <p>
+                            Early project moodboard; inspiration, general
+                            direction.
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={moodboard}
+                        alt="Restrained WGM moodboard."
+                    />
+                    <figcaption>
+                        <p>
+                            Later moodboard; getting closer to the core style
+                            &amp; feel.
+                        </p>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="text">
+            <div class="concept-text">
                 <p class="concept-description">
                     This project’s goal is to refresh and enliven WGM’s web
                     presence, in the process doing justice to and appropriately
@@ -138,11 +162,11 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="data" id="research">
-            <p class="title">Collected Data & Research</p>
-            <div class="images">
+            <p class="data-title title">Collected Data & Research</p>
+            <div class="data-images">
                 <!-- <Image src={} alt="." /> -->
             </div>
-            <div class="text">
+            <div class="data-text">
                 <p class="data-description">
                     Since this project is not conceptual — in the sense that
                     it’s a client-based project with a real-world end goal of
@@ -161,31 +185,28 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     progressed, allowing me to create better design work more
                     aligned with the organization’s mission and goals.
                 </p>
-                <p class="data-description">
+                <ul class="data-description">
                     Feedback and suggestions consisted of:
-                    <ul>
-                        <li>
-                            color & typography feedback, particularly related to
-                            readability and existing WGM audience demographics
-                        </li>
-                        <li>
-                            information-related input — for example, which
-                            pieces of information fit within an ideal hierarchy
-                            when building the site, for both existing and new
-                            users
-                        </li>
-                        <li>
-                            structure feedback - when starting, we knew we
-                            wanted to re-organize the site because the existing
-                            version had gotten messy, but since the client knows
-                            their business best, they advised me on a good
-                            strategy to clean things up and make the site more
-                            generally legible
-                        </li>
-                    </ul>
-                </p>
+                    <li>
+                        color & typography feedback, particularly related to
+                        readability and existing WGM audience demographics
+                    </li>
+                    <li>
+                        information-related input — for example, which pieces of
+                        information fit within an ideal hierarchy when building
+                        the site, for both existing and new users
+                    </li>
+                    <li>
+                        structure feedback - when starting, we knew we wanted to
+                        re-organize the site because the existing version had
+                        gotten messy, but since the client knows their business
+                        best, they advised me on a good strategy to clean things
+                        up and make the site more generally legible
+                    </li>
+                </ul>
                 <p class="data-description">
-                    See references & research sources at the end of this page.
+                    See references & research sources at the top navigation link
+                    on this page.
                 </p>
             </div>
         </div>
@@ -230,6 +251,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     First, I spent some time gathering all of the content (text,
                     images, video, etc.) on the current WGM site, and put it all
                     into a <a
+                        class="body-link"
                         href="https://docs.google.com/document/d/1NferbwDcXmgKbl5hn4y4Nmx7NyS1naMfTcVSP28Ll5k/edit?usp=sharing"
                         >very long document</a
                     >. From there, I assessed the state of the text content and
@@ -256,12 +278,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     In terms of typography, in collaboration we chose to break
                     up large headings and copy. The lovely, expressive serif
                     typeface Violeta by Javier Quintana Godoy of <a
+                        class="body-link"
                         href="https://quintana-font.cl/typefaces/violeta"
                         target="_blank">Quintana Type</a
                     > provides large headings and major focus points. The designed-for-accessibility,
                     highly functional yet funky sans serif typeface Inclusive Sans
                     by
                     <a
+                        class="body-link"
                         href="https://www.oliviaking.com/inclusivesans/feature"
                         target="_blank">Olivia King</a
                     > provides all body text and smaller inline headings, with a
@@ -305,8 +329,10 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     design, including:
                     <ul>
                         <li>
-                            <a href="https://membee.com/" target="_blank"
-                                >Membee</a
+                            <a
+                                class="body-link"
+                                href="https://membee.com/"
+                                target="_blank">Membee</a
                             >
                             donor/member relations CRM, which houses information
                             on all of WGM’s learning community
@@ -330,8 +356,10 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                 </p>
                 <p class="process-description">
                     Otherwise, the plan is to develop the site with
-                    <a href="https://picostrap.com/" target="_blank"
-                        >Picostrap</a
+                    <a
+                        class="body-link"
+                        href="https://picostrap.com/"
+                        target="_blank">Picostrap</a
                     > as a starter theme that I’ll tweak heavily to align with my
                     Figma designs — by starting with Picostrap, I’ll already have
                     some crucial performance considerations in place. In terms of
@@ -364,7 +392,9 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         /* core styles */
         main {
             padding: 0;
-            background-image: url("../assets/images/grid-background.svg");
+            background: white;
+            /*background-image: url("../assets/images/grid-background.svg");
+            background-repeat: round;*/
         }
         code {
             font-family: monospace;
@@ -384,30 +414,28 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             font-size: var(--step-0);
             line-height: 1.35;
             color: var(--c-onyx);
-            ~ ul {
-                margin: 0.5rem 0;
-                font-family: var(--f-diatype);
-                font-weight: 500;
-                font-size: var(--step-0);
-                line-height: 1.35;
-                color: var(--c-onyx);
-                padding-inline-start: var(--step-2);
-                list-style-type: "—  ";
-                list-style-position: outside;
-                li a:hover {
-                    color: var(--c-goldenrod);
-                }
+        }
+        .body-link {
+            text-decoration: underline dotted var(--c-goldenrod) 2px;
+            text-underline-offset: 4px;
+            &::after {
+                content: " \1F86D";
             }
-            & a,
-            ul li a {
-                text-decoration: underline dotted var(--c-goldenrod) 2px;
-                text-underline-offset: 4px;
-                &::after {
-                    content: " \1F86D";
-                }
-            }
-            a:hover {
+            &:hover {
                 color: var(--c-goldenrod);
+            }
+        }
+        ul {
+            padding: var(--step-0);
+            font-family: var(--f-diatype);
+            font-weight: 500;
+            font-size: var(--step-0);
+            line-height: 1.35;
+            color: var(--c-onyx);
+            padding-inline-start: var(--step-2);
+            list-style: "— " inside;
+            li {
+                margin-block-start: var(--step-0);
             }
         }
         /* intro section */
@@ -419,7 +447,13 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             gap: var(--step-0);
             border-block-end: 1px solid var(--c-onyx);
             padding: var(--step-1) var(--step-0);
-            background: var(--c-lavender);
+            @media screen and (width <= 900px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, min-content);
+                grid-template-areas:
+                    "intro-header"
+                    "intro-text";
+            }
         }
         .intro-header {
             grid-area: intro-header;
@@ -428,6 +462,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             grid-template-rows: repeat(4, min-content);
             gap: calc (var(--step-0) / 2);
             font-family: var(--f-fjalla);
+            padding: var(--step-0);
+            border: 1px solid var(--c-onyx);
         }
         .intro-title {
             font-size: var(--step-2);
@@ -442,36 +478,40 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         .intro-text {
             grid-area: intro-text;
         }
+        .hook {
+            padding: var(--step-0);
+            border: 1px solid var(--c-onyx);
+        }
         /* anchor links */
         .anchors {
-            font-family: var(--f-fjalla);
             font-size: var(--step-0);
             color: var(--c-onyx);
             padding: var(--step-0);
             border-block-end: 1px solid var(--c-onyx);
             background: var(--c-lavender);
-            > ul {
-                padding: var(--step-0);
-                display: flex;
+            ul {
+                padding: calc(var(--step-0) / 2);
+                display: grid;
+                grid-template-columns: repeat(5, min-content);
+                grid-template-rows: 1fr;
                 gap: calc(var(--step-0) / 2);
-                flex-direction: row;
                 justify-content: center;
-                > li {
-                    > a {
-                        padding: 0.75rem;
-                        border-radius: 1rem;
-                        border: 1px solid var(--c-onyx);
-                        text-decoration: none;
-                        &:hover {
-                            background-color: var(--c-goldenrod);
-                        }
+                align-content: start;
+                list-style: none;
+                li a {
+                    padding: calc(var(--step-0) * 0.75);
+                    border-radius: 1rem;
+                    border: 1px solid var(--c-onyx);
+                    font-family: var(--f-fjalla);
+                    text-decoration: none;
+                    &:hover {
+                        background-color: var(--c-goldenrod);
+                        color: var(--c-onyx);
                     }
                 }
             }
         }
         /* entire section - full width */
-        .concept,
-        .data,
         .process,
         .video {
             display: grid;
@@ -482,7 +522,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             gap: 2rem;
             border-block-end: 1px solid var(--c-onyx);
             padding: 2rem 1rem;
-            background: white;
         }
         /* problem section styling */
         .problem {
@@ -495,7 +534,14 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             gap: var(--step-0);
             border-block-end: 1px solid var(--c-onyx);
             padding: var(--step-1) var(--step-0);
-            background: white;
+            @media screen and (width <= 900px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, min-content);
+                grid-template-areas:
+                    "problem-title"
+                    "problem-text"
+                    "problem-images";
+            }
         }
         .problem-title {
             grid-area: problem-title;
@@ -508,7 +554,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         }
         .problem-description {
             padding: var(--step-0);
-            border: 1px solid black;
+            border: 1px solid var(--c-onyx);
         }
         .problem-images {
             grid-area: problem-images;
@@ -516,6 +562,76 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         }
         .tall-image {
             overflow: scroll;
+            border: 1px solid var(--c-onyx);
+        }
+        /* concept section */
+        .concept {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+                "concept-title concept-title"
+                "concept-text concept-images";
+            gap: var(--step-0);
+            border-block-end: 1px solid var(--c-onyx);
+            padding: var(--step-1) var(--step-0);
+            @media screen and (width <= 900px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, min-content);
+                grid-template-areas:
+                    "concept-title"
+                    "concept-text"
+                    "concept-images";
+            }
+        }
+        .concept-title {
+            grid-area: concept-title;
+        }
+        .concept-text {
+            grid-area: concept-text;
+        }
+        .concept-images {
+            grid-area: concept-images;
+            display: grid;
+            gap: var(--step-0);
+        }
+        .concept-description {
+            padding: var(--step-0);
+            border: 1px solid var(--c-onyx);
+        }
+        /* data section */
+        .data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+                "data-title data-title"
+                "data-text data-images";
+            gap: var(--step-0);
+            border-block-end: 1px solid var(--c-onyx);
+            padding: var(--step-1) var(--step-0);
+            @media screen and (width <= 900px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, min-content);
+                grid-template-areas:
+                    "data-title"
+                    "data-text"
+                    "data-images";
+            }
+        }
+        .data-title {
+            grid-area: data-title;
+        }
+        .data-text {
+            grid-area: data-text;
+            display: grid;
+            gap: var(--step-0);
+        }
+        .data-images {
+            grid-area: data-images;
+        }
+        .data-description {
+            padding: var(--step-0);
             border: 1px solid var(--c-onyx);
         }
         .images {
@@ -535,25 +651,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             grid-template-rows: repeat(10, min-content);
             align-items: start;
             grid-area: text;
-        }
-
-        /* small width styles */
-        @media screen and (width <= 900px) {
-            .intro {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, min-content);
-                grid-template-areas:
-                    "intro-header"
-                    "intro-text";
-            }
-            .problem {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, min-content);
-                grid-template-areas:
-                    "problem-title"
-                    "problem-text"
-                    "problem-images";
-            }
         }
     </style>
 </div>
