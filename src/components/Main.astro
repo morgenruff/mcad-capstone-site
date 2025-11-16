@@ -20,7 +20,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         <div class="intro" id="intro">
             <div class="intro-header">
                 <p class="intro-title">
-                    A New Internet Home for the Weavers Guild of Minnesota
+                    A New Internet Home for the<br />Weavers Guild of Minnesota
                 </p>
                 <p class="intro-name">Morgen Ruff</p>
                 <p class="intro-program">MCAD MA in Graphic &amp; Web Design</p>
@@ -211,23 +211,46 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="process" id="process">
-            <p class="title">Process</p>
-            <div class="images">
-                <Image src={wireHome} alt="Wireframe of a homepage." />
-                <Image
-                    src={hifiHome}
-                    alt="Screenshot of the new WGM homepage."
-                />
-                <Image
-                    src={hifiAbout}
-                    alt="Screenshot of the new WGM homepage."
-                />
-                <Image
-                    src={hifiVisit}
-                    alt="Screenshot of the new WGM homepage."
-                />
+            <p class="process-title title">Process</p>
+            <div class="process-images">
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={wireHome}
+                        alt="Wireframe of a homepage."
+                    />
+                    <figcaption>
+                        <p>Initial wireframe for WGM homepage.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={hifiHome}
+                        alt="Screenshot of the new WGM homepage."
+                    />
+                    <figcaption>
+                        <p>The new WGM Homepage prototype.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={hifiAbout}
+                        alt="Screenshot of the new WGM about us page."
+                    />
+                    <figcaption><p>The new WGM 'about us' page.</p></figcaption>
+                </figure>
+                <figure>
+                    <Image
+                        class="tall-image"
+                        src={hifiVisit}
+                        alt="Screenshot of the new WGM homepage."
+                    />
+                    <figcaption><p>The new WGM 'visit' page.</p></figcaption>
+                </figure>
             </div>
-            <div class="text">
+            <div class="process-text">
                 <p class="process-description">
                     This project started in a kind of gut-feeling place: the
                     knowledge that something about the WGM website was wrong,
@@ -320,40 +343,37 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     follows web standards and keeps JavaScript bloat to an
                     absolute minimum.
                 </p>
-                <p class="process-description">
+                <ul class="process-description">
                     As a result, the prototypes presented here are the current
                     state of the overarching project, and the final result of my
                     capstone work. Site development and deployment will directly
                     follow. In development, one of the major challenges will be
                     integrating existing business-critical tools into the new
                     design, including:
-                    <ul>
-                        <li>
-                            <a
-                                class="body-link"
-                                href="https://membee.com/"
-                                target="_blank">Membee</a
-                            >
-                            donor/member relations CRM, which houses information
-                            on all of WGM’s learning community
-                        </li>
-                        <li>
-                            PayPal payments processing - but thinking of
-                            switching services, still in the research phase
-                        </li>
-                        <li>
-                            Vimeo embeds linked to member records, so those who
-                            sign up for classes can access class recordings
-                            afterwards
-                        </li>
-                        <li>
-                            New e-commerce functionality via WooCommerce —
-                            currently the only online transactions WGM processes
-                            are annual membership fees, done through Membee with
-                            PayPal as payment processor
-                        </li>
-                    </ul>
-                </p>
+                    <li>
+                        <a
+                            class="body-link"
+                            href="https://membee.com/"
+                            target="_blank">Membee</a
+                        >
+                        donor/member relations CRM, which houses information on all
+                        of WGM’s learning community
+                    </li>
+                    <li>
+                        PayPal payments processing - but thinking of switching
+                        services, still in the research phase
+                    </li>
+                    <li>
+                        Vimeo embeds linked to member records, so those who sign
+                        up for classes can access class recordings afterwards
+                    </li>
+                    <li>
+                        New e-commerce functionality via WooCommerce — currently
+                        the only online transactions WGM processes are annual
+                        membership fees, done through Membee with PayPal as
+                        payment processor
+                    </li>
+                </ul>
                 <p class="process-description">
                     Otherwise, the plan is to develop the site with
                     <a
@@ -371,286 +391,351 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             </div>
         </div>
         <div class="video" id="walkthrough">
-            <p class="title">Project Walkthrough</p>
-            <div class="images">
-                <Image
-                    class="video-embed"
-                    src={videoSlide}
-                    alt="Yellow textured slide with the word video in the center."
-                />
-            </div>
-            <div class="text">
-                <p class="video-description">FPO</p>
+            <p class="video-title title">Project Presentation</p>
+            <div class="video-images">
+                <figure>
+                    <Image
+                        class="video-embed"
+                        src={videoSlide}
+                        alt="Yellow textured slide with the word video in the center."
+                    />
+                    <figcaption>
+                        <p style="text-align: left;">
+                            Project presentation, December 10, 2025.
+                        </p>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </main>
+</div>
 
-    <style>
-        #container {
-            height: 100%;
+<style>
+    #container {
+        height: 100%;
+    }
+    /* core styles */
+    main {
+        padding: 0;
+        background: white;
+        background-image: url("../assets/images/18x18-bg.svg");
+    }
+    code {
+        font-family: monospace;
+        font-size: calc(var(--step-0) / 1.2);
+        background: var(--c-goldenrod);
+        padding: calc(var(--step-0) / 6);
+        border-radius: calc(var(--step-0) / 2);
+    }
+    figure {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+        background: var(--c-lavender);
+    }
+    figcaption p {
+        font-size: calc(var(--step-0) * 0.75);
+        text-align: right;
+        margin-block-start: calc(var(--step-0) / 3);
+    }
+    p {
+        font-family: var(--f-diatype);
+        font-weight: 500;
+        font-size: var(--step-0);
+        line-height: 1.35;
+        color: var(--c-onyx);
+    }
+    .body-link {
+        text-decoration: underline dotted var(--c-goldenrod) 2px;
+        text-underline-offset: 4px;
+        &::after {
+            content: " \1F86D";
         }
-        /* core styles */
-        main {
-            padding: 0;
-            background: white;
-            /*background-image: url("../assets/images/grid-background.svg");
-            background-repeat: round;*/
+        &:hover {
+            color: var(--c-goldenrod);
         }
-        code {
-            font-family: monospace;
-            font-size: calc(var(--step-0) / 1.2);
-            background: var(--c-goldenrod);
-            padding: calc(var(--step-0) / 6);
-            border-radius: calc(var(--step-0) / 2);
+    }
+    ul {
+        padding: var(--step-0);
+        font-family: var(--f-diatype);
+        font-weight: 500;
+        font-size: var(--step-0);
+        line-height: 1.35;
+        color: var(--c-onyx);
+        padding-inline-start: var(--step-2);
+        list-style: "— " inside;
+        li {
+            margin-block-start: var(--step-0);
         }
-        figcaption p {
-            font-size: calc(var(--step-0) * 0.75);
-            text-align: right;
-            margin-block-start: calc(var(--step-0) / 2);
-        }
-        p {
-            font-family: var(--f-diatype);
-            font-weight: 500;
-            font-size: var(--step-0);
-            line-height: 1.35;
-            color: var(--c-onyx);
-        }
-        .body-link {
-            text-decoration: underline dotted var(--c-goldenrod) 2px;
-            text-underline-offset: 4px;
-            &::after {
-                content: " \1F86D";
-            }
-            &:hover {
-                color: var(--c-goldenrod);
-            }
-        }
-        ul {
-            padding: var(--step-0);
-            font-family: var(--f-diatype);
-            font-weight: 500;
-            font-size: var(--step-0);
-            line-height: 1.35;
-            color: var(--c-onyx);
-            padding-inline-start: var(--step-2);
-            list-style: "— " inside;
-            li {
-                margin-block-start: var(--step-0);
-            }
-        }
-        /* intro section */
-        .intro {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-            grid-template-areas: "intro-header intro-text";
-            gap: var(--step-0);
-            border-block-end: 1px solid var(--c-onyx);
-            padding: var(--step-1) var(--step-0);
-            @media screen and (width <= 900px) {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, min-content);
-                grid-template-areas:
-                    "intro-header"
-                    "intro-text";
-            }
-        }
-        .intro-header {
-            grid-area: intro-header;
-            display: grid;
+    }
+    .images {
+        display: grid;
+        gap: var(--step-0);
+        grid-area: images;
+    }
+    .tall-image {
+        overflow: scroll;
+        border: 1px solid var(--c-onyx);
+    }
+    /* title text */
+    .title {
+        font-family: var(--f-fjalla);
+        font-size: var(--step-2);
+        color: var(--c-onyx);
+    }
+    /* intro section */
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "intro-header intro-text";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, min-content);
-            gap: calc (var(--step-0) / 2);
-            font-family: var(--f-fjalla);
-            padding: var(--step-0);
-            border: 1px solid var(--c-onyx);
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+                "intro-header"
+                "intro-text";
         }
-        .intro-title {
-            font-size: var(--step-2);
-            font-family: var(--f-fjalla);
-        }
-        .intro-name,
-        .intro-program,
-        .intro-date {
-            font-size: var(--step-1);
-            font-family: var(--f-fjalla);
-        }
-        .intro-text {
-            grid-area: intro-text;
-        }
-        .hook {
-            padding: var(--step-0);
-            border: 1px solid var(--c-onyx);
-        }
-        /* anchor links */
-        .anchors {
-            font-size: var(--step-0);
-            color: var(--c-onyx);
-            padding: var(--step-0);
-            border-block-end: 1px solid var(--c-onyx);
-            background: var(--c-lavender);
-            ul {
-                padding: calc(var(--step-0) / 2);
-                display: grid;
-                grid-template-columns: repeat(5, min-content);
-                grid-template-rows: 1fr;
-                gap: calc(var(--step-0) / 2);
-                justify-content: center;
-                align-content: start;
-                list-style: none;
-                li a {
-                    padding: calc(var(--step-0) * 0.75);
-                    border-radius: 1rem;
-                    border: 1px solid var(--c-onyx);
-                    font-family: var(--f-fjalla);
-                    text-decoration: none;
-                    &:hover {
-                        background-color: var(--c-goldenrod);
-                        color: var(--c-onyx);
-                    }
+    }
+    .intro-header {
+        grid-area: intro-header;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content);
+        gap: calc (var(--step-0) / 2);
+        font-family: var(--f-fjalla);
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+        background: white;
+    }
+    .intro-title {
+        font-size: var(--step-2);
+        font-family: var(--f-fjalla);
+    }
+    .intro-name,
+    .intro-program,
+    .intro-date {
+        font-size: var(--step-1);
+        font-family: var(--f-fjalla);
+    }
+    .intro-text {
+        grid-area: intro-text;
+        background: white;
+    }
+    .hook {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    /* anchor links */
+    .anchors {
+        font-size: var(--step-0);
+        color: var(--c-onyx);
+        padding: calc(var(--step-0) / 4) 0 var(--step-0) 0;
+        border-block-end: 1px solid var(--c-onyx);
+        background: var(--c-lavender);
+        ul {
+            padding: calc(var(--step-0) / 2);
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            grid-template-rows: 1fr;
+            gap: calc(var(--step-0) / 2);
+            justify-content: center;
+            align-content: start;
+            list-style: none;
+            li a {
+                padding: calc(var(--step-0) * 0.75);
+                border-radius: 1rem;
+                border: 1px solid var(--c-onyx);
+                font-family: var(--f-fjalla);
+                text-decoration: none;
+                &:hover {
+                    background-color: var(--c-goldenrod);
+                    color: var(--c-onyx);
                 }
             }
         }
-        /* entire section - full width */
-        .process,
-        .video {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+    }
+    /* problem section styling */
+    .problem {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "problem-title problem-title"
+            "problem-text problem-images";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
             grid-template-areas:
-                "title title"
-                "images text";
-            gap: 2rem;
-            border-block-end: 1px solid var(--c-onyx);
-            padding: 2rem 1rem;
+                "problem-title"
+                "problem-text"
+                "problem-images";
         }
-        /* problem section styling */
-        .problem {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+    }
+    .problem-title {
+        grid-area: problem-title;
+    }
+    .problem-text {
+        grid-area: problem-text;
+        display: grid;
+        gap: var(--step-0);
+        align-content: start;
+    }
+    .problem-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    .problem-images {
+        grid-area: problem-images;
+        overflow: scroll;
+    }
+    /* concept section */
+    .concept {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "concept-title concept-title"
+            "concept-text concept-images";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas:
+                "concept-title"
+                "concept-text"
+                "concept-images";
+        }
+    }
+    .concept-title {
+        grid-area: concept-title;
+    }
+    .concept-text {
+        grid-area: concept-text;
+    }
+    .concept-images {
+        grid-area: concept-images;
+        display: grid;
+        gap: var(--step-0);
+    }
+    .concept-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    /* data section */
+    .data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "data-title data-title"
+            "data-text data-images";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas:
+                "data-title"
+                "data-text"
+                "data-images";
+        }
+    }
+    .data-title {
+        grid-area: data-title;
+    }
+    .data-text {
+        grid-area: data-text;
+        display: grid;
+        gap: var(--step-0);
+    }
+    .data-images {
+        grid-area: data-images;
+    }
+    .data-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    /* process section */
+    .process {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "process-title process-title"
+            "process-text process-images";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas:
+                "process-title"
+                "process-text"
+                "process-images";
+        }
+    }
+    .process-title {
+        grid-area: process-title;
+    }
+    .process-text {
+        grid-area: process-text;
+        display: grid;
+        gap: var(--step-0);
+        align-content: start;
+    }
+    .process-images {
+        grid-area: process-images;
+        display: grid;
+        gap: var(--step-0);
+    }
+    .process-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    /* video section */
+    .video {
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "video-title"
+            "video-images";
+        gap: var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        padding: var(--step-1) var(--step-0);
+        @media screen and (width <= 900px) {
+            /*grid-template-columns: 1fr;*/
             grid-template-rows: repeat(2, min-content);
             grid-template-areas:
-                "problem-title problem-title"
-                "problem-text problem-images";
-            gap: var(--step-0);
-            border-block-end: 1px solid var(--c-onyx);
-            padding: var(--step-1) var(--step-0);
-            @media screen and (width <= 900px) {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, min-content);
-                grid-template-areas:
-                    "problem-title"
-                    "problem-text"
-                    "problem-images";
-            }
+                "video-title"
+                "video-images";
         }
-        .problem-title {
-            grid-area: problem-title;
-        }
-        .problem-text {
-            grid-area: problem-text;
-            display: grid;
-            gap: var(--step-0);
-            align-content: start;
-        }
-        .problem-description {
-            padding: var(--step-0);
-            border: 1px solid var(--c-onyx);
-        }
-        .problem-images {
-            grid-area: problem-images;
-            overflow: scroll;
-        }
-        .tall-image {
-            overflow: scroll;
-            border: 1px solid var(--c-onyx);
-        }
-        /* concept section */
-        .concept {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, min-content);
-            grid-template-areas:
-                "concept-title concept-title"
-                "concept-text concept-images";
-            gap: var(--step-0);
-            border-block-end: 1px solid var(--c-onyx);
-            padding: var(--step-1) var(--step-0);
-            @media screen and (width <= 900px) {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, min-content);
-                grid-template-areas:
-                    "concept-title"
-                    "concept-text"
-                    "concept-images";
-            }
-        }
-        .concept-title {
-            grid-area: concept-title;
-        }
-        .concept-text {
-            grid-area: concept-text;
-        }
-        .concept-images {
-            grid-area: concept-images;
-            display: grid;
-            gap: var(--step-0);
-        }
-        .concept-description {
-            padding: var(--step-0);
-            border: 1px solid var(--c-onyx);
-        }
-        /* data section */
-        .data {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, min-content);
-            grid-template-areas:
-                "data-title data-title"
-                "data-text data-images";
-            gap: var(--step-0);
-            border-block-end: 1px solid var(--c-onyx);
-            padding: var(--step-1) var(--step-0);
-            @media screen and (width <= 900px) {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, min-content);
-                grid-template-areas:
-                    "data-title"
-                    "data-text"
-                    "data-images";
-            }
-        }
-        .data-title {
-            grid-area: data-title;
-        }
-        .data-text {
-            grid-area: data-text;
-            display: grid;
-            gap: var(--step-0);
-        }
-        .data-images {
-            grid-area: data-images;
-        }
-        .data-description {
-            padding: var(--step-0);
-            border: 1px solid var(--c-onyx);
-        }
-        .images {
-            display: grid;
-            gap: var(--step-0);
-            grid-area: images;
-        }
-        /* title text */
-        .title {
-            font-family: var(--f-fjalla);
-            font-size: var(--step-2);
-            color: var(--c-onyx);
-        }
-        .text {
-            display: grid;
-            gap: 1rem;
-            grid-template-rows: repeat(10, min-content);
-            align-items: start;
-            grid-area: text;
-        }
-    </style>
-</div>
+    }
+    .video-title {
+        grid-area: video-title;
+    }
+    .video-images {
+        grid-area: video-images;
+        margin: 0;
+    }
+    .video-embed {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 1px solid var(--c-onyx);
+    }
+    .video-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+</style>
