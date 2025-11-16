@@ -364,12 +364,13 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         /* core styles */
         main {
             padding: 0;
+            background-image: url("../assets/images/grid-background.svg");
         }
         code {
             font-family: monospace;
             font-size: calc(var(--step-0) / 1.2);
             background: var(--c-goldenrod);
-            padding: calc(var(--step-0) / 4);
+            padding: calc(var(--step-0) / 6);
             border-radius: calc(var(--step-0) / 2);
         }
         figcaption p {
@@ -502,8 +503,12 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         .problem-text {
             grid-area: problem-text;
             display: grid;
-            gap: calc(var(--step-0) / 2);
+            gap: var(--step-0);
             align-content: start;
+        }
+        .problem-description {
+            padding: var(--step-0);
+            border: 1px solid black;
         }
         .problem-images {
             grid-area: problem-images;
