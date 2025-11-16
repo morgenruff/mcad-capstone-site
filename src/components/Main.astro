@@ -315,7 +315,11 @@ import hifiNews from "../assets/images/news & events-20251102.png";
                     particular focus on readability. Typographic contrast was important
                     in coming to these choices.
                 </p>
-                <Image src={typeColor} alt="Brand guidelines for WGM." />
+                <Image
+                    src={typeColor}
+                    alt="Brand guidelines for WGM."
+                    style="border: 1px solid var(--c-goldenrod);"
+                />
                 <p class="process-description">
                     Next, I dove into creating a wireframes of low-fidelity
                     versions of a few potential pages for a new site, working in
@@ -417,8 +421,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     /* core styles */
     main {
         padding: 0;
-        background: white;
-        background-image: url("../assets/images/18x18-bg.svg");
+        background: var(--c-onyx);
+        background-image: url("../assets/images/nnnoise.svg");
     }
     code {
         font-family: monospace;
@@ -429,7 +433,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     figure {
         padding: var(--step-0);
-        border: 1px solid var(--c-onyx);
+        border: 1px solid var(--c-lavender);
         background: var(--c-lavender);
     }
     figcaption p {
@@ -481,6 +485,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         font-family: var(--f-fjalla);
         font-size: var(--step-2);
         color: var(--c-onyx);
+        padding: var(--step-0);
+        background: var(--c-goldenrod);
     }
     /* intro section */
     .intro {
@@ -566,7 +572,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "problem-title problem-title"
             "problem-text problem-images";
         gap: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
         padding: var(--step-1) var(--step-0);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
@@ -589,6 +594,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .problem-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
+        background: white;
     }
     .problem-images {
         grid-area: problem-images;
@@ -603,7 +609,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "concept-title concept-title"
             "concept-text concept-images";
         gap: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
         padding: var(--step-1) var(--step-0);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
@@ -628,6 +633,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .concept-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
+        background: white;
     }
     /* data section */
     .data {
@@ -638,7 +644,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "data-title data-title"
             "data-text data-images";
         gap: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
         padding: var(--step-1) var(--step-0);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
@@ -663,6 +668,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .data-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
+        background: white;
     }
     /* process section */
     .process {
@@ -673,7 +679,6 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "process-title process-title"
             "process-text process-images";
         gap: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
         padding: var(--step-1) var(--step-0);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
@@ -701,6 +706,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     .process-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
+        background: white;
     }
     /* video section */
     .video {
