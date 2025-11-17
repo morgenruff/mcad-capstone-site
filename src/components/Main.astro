@@ -422,7 +422,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     main {
         padding: 0;
         background: var(--c-onyx);
-        background-image: url("../assets/images/nnnoise.svg");
+        background-image: url("../assets/images/nnnoise-light.svg");
     }
     code {
         font-family: monospace;
@@ -433,7 +433,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     figure {
         padding: var(--step-0);
-        border: 1px solid var(--c-lavender);
+        border: 1px solid var(--c-onyx);
         background: var(--c-lavender);
     }
     figcaption p {
@@ -573,6 +573,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "problem-text problem-images";
         gap: var(--step-0);
         padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, min-content);
@@ -584,6 +585,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     .problem-title {
         grid-area: problem-title;
+        border: 1px solid var(--c-onyx);
     }
     .problem-text {
         grid-area: problem-text;
@@ -610,6 +612,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "concept-text concept-images";
         gap: var(--step-0);
         padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, min-content);
@@ -621,6 +624,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     .concept-title {
         grid-area: concept-title;
+        border: 1px solid var(--c-onyx);
     }
     .concept-text {
         grid-area: concept-text;
@@ -645,6 +649,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "data-text data-images";
         gap: var(--step-0);
         padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, min-content);
@@ -656,6 +661,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     .data-title {
         grid-area: data-title;
+        border: 1px solid var(--c-onyx);
     }
     .data-text {
         grid-area: data-text;
@@ -680,6 +686,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "process-text process-images";
         gap: var(--step-0);
         padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, min-content);
@@ -691,6 +698,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
     }
     .process-title {
         grid-area: process-title;
+        border: 1px solid var(--c-onyx);
     }
     .process-text {
         grid-area: process-text;
@@ -717,8 +725,8 @@ import hifiNews from "../assets/images/news & events-20251102.png";
             "video-title"
             "video-images";
         gap: var(--step-0);
-        border-block-end: 1px solid var(--c-onyx);
         padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             /*grid-template-columns: 1fr;*/
             grid-template-rows: repeat(2, min-content);
@@ -728,6 +736,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
         }
     }
     .video-title {
+        border: 1px solid var(--c-onyx);
         grid-area: video-title;
     }
     .video-images {
