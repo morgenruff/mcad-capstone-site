@@ -16,7 +16,7 @@
 	color-scheme: dark light;
 	tab-size: 2;
 	scrollbar-gutter: stable;
-	interpolate-size: allow-keywords;
+	--interpolate-size: allow-keywords;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -71,7 +71,7 @@
 }
 
 :where(button, [type="button"], [type="reset"], [type="submit"]) {
-	-webkit-appearance: button;
+	--webkit-appearance: button;
 }
 
 :where(button, input, optgroup, select, textarea) {
