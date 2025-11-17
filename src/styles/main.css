@@ -18,7 +18,7 @@
 	scrollbar-gutter: stable;
 	--interpolate-size: allow-keywords;
 	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
+	--webkit-text-size-adjust: 100%;
 }
 
 :where(html:has(dialog:modal[open])) {
