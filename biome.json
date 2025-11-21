@@ -20,9 +20,31 @@
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "double"
+			"quoteStyle": "single"
 		}
 	},
+	"css": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "tab",
+      "indentWidth": 2,
+      "quoteStyle": "single"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "html": {
+  "formatter": {
+    "enabled": true,
+    "bracketSameLine": true,
+    "attributePosition": "multiline",
+    "indentStyle": "tab"
+  },
+  "linter": {
+    "enabled": true
+  }
+  },
 	"assist": {
 		"enabled": true,
 		"actions": {
