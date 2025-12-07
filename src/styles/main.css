@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 }
 
-:where([hidden]:not([hidden="until-found"])) {
+:where([hidden]:not([hidden='until-found'])) {
 	display: none;
 }
 
@@ -62,7 +62,7 @@
 	resize: vertical block;
 }
 
-:where(button, label, select, summary, [role="button"], [role="option"]) {
+:where(button, label, select, summary, [role='button'], [role='option']) {
 	cursor: pointer;
 }
 
@@ -70,7 +70,7 @@
 	text-transform: none;
 }
 
-:where(button, [type="button"], [type="reset"], [type="submit"]) {
+:where(button, [type='button'], [type='reset'], [type='submit']) {
 	--webkit-appearance: button;
 }
 
@@ -83,9 +83,9 @@
 
 :where(
 		button::-moz-focus-inner,
-		[type="button"]::-moz-focus-inner,
-		[type="reset"]::-moz-focus-inner,
-		[type="submit"]::-moz-focus-inner
+		[type='button']::-moz-focus-inner,
+		[type='reset']::-moz-focus-inner,
+		[type='submit']::-moz-focus-inner
 	) {
 	border-style: none;
 	padding: 0;
@@ -93,9 +93,9 @@
 
 :where(
 		button:-moz-focusring,
-		[type="button"]:-moz-focusring,
-		[type="reset"]:-moz-focusring,
-		[type="submit"]:-moz-focusring
+		[type='button']:-moz-focusring,
+		[type='reset']:-moz-focusring,
+		[type='submit']:-moz-focusring
 	) {
 	outline: 1px dotted ButtonText;
 }
@@ -226,20 +226,22 @@
 
 /* diatype semi-mono variable */
 @font-face {
-    font-family: 'Diatype Semi-Mono';
-    font-style: normal;
-    font-display: swap;
-    src: url(../assets/fonts/ABCDiatypeSemi-MonoVariableEdu-Regular.woff2);
+	font-family: 'Diatype Semi-Mono';
+	font-style: normal;
+	font-display: swap;
+	src: url(../assets/fonts/ABCDiatypeSemi-MonoVariableEdu-Regular.woff2);
 }
 
 /* fjalla-one-latin-400-normal */
 @font-face {
-  font-family: 'Fjalla One';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fjalla-one@latest/latin-400-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+	font-family: 'Fjalla One';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/fjalla-one@latest/latin-400-normal.woff2)
+		format('woff2');
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
@@ -253,7 +255,8 @@
 	--c-goldenrod: oklch(82% 42% 91deg);
 	--c-onyx: oklch(25% 12% 108deg);
 	/* @link https://utopia.fyi/type/calculator?c=360,16,1.333,1600,24,1.333,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-    --step-0: clamp(1rem, 0.8548rem + 0.6452vw, 1.5rem);
-    --step-1: clamp(1.333rem, 1.1395rem + 0.86vw, 1.9995rem);
-    --step-2: clamp(1.7769rem, 1.519rem + 1.1464vw, 2.6653rem);
+	--step-0: clamp(1rem, 0.8548rem + 0.6452vw, 1.5rem);
+	--step-1: clamp(1.333rem, 1.1395rem + 0.86vw, 1.9995rem);
+	--step-2: clamp(1.7769rem, 1.519rem + 1.1464vw, 2.6653rem);
+	--step-5: clamp(10rem, 6rem + 1.1464vw, 15rem);
 }
