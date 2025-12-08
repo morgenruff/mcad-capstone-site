@@ -124,32 +124,32 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         <div class="concept" id="concept">
             <p class="concept-title title">Concept</p>
             <div class="concept-images">
-                <figure>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={earlyInspo}
                         alt="Bright inspiration moodboard."
                     />
-                    <figcaption>
+                    <div class="figcaption">
                         <p>
                             Early project moodboard; inspiration, general
                             direction.
                         </p>
-                    </figcaption>
-                </figure>
-                <figure>
+                    </div>
+                </div>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={moodboard}
                         alt="Restrained WGM moodboard."
                     />
-                    <figcaption>
+                    <div class="figcaption">
                         <p>
                             Later moodboard; getting closer to the core style
                             &amp; feel.
                         </p>
-                    </figcaption>
-                </figure>
+                    </div>
+                </div>
             </div>
             <div class="concept-text">
                 <p class="concept-description">
@@ -184,9 +184,9 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
                 <p class="data-description">
                     Throughout the project, I worked directly with two key
                     stakeholders at WGM — board chair Rachel Holdgrafer and
-                    education manager Betsy Konop. Through a variety of meetings
-                    and design sessions, both provided perspective, ideas,
-                    testing, feedback, and collaboration as the project
+                    executive director Betsy Konop. Through a variety of
+                    meetings and design sessions, both provided perspective,
+                    ideas, testing, feedback, and collaboration as the project
                     progressed, allowing me to create better design work more
                     aligned with the organization’s mission and goals.
                 </p>
@@ -218,42 +218,46 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         <div class="process" id="process">
             <p class="process-title title">Process</p>
             <div class="process-images">
-                <figure>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={wireHome}
                         alt="Wireframe of a homepage."
                     />
-                    <figcaption>
+                    <div class="figcaption">
                         <p>Initial wireframe for WGM homepage.</p>
-                    </figcaption>
-                </figure>
-                <figure>
+                    </div>
+                </div>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={hifiHome}
                         alt="Screenshot of the new WGM homepage."
                     />
-                    <figcaption>
+                    <div class="figcaption">
                         <p>The new WGM Homepage prototype.</p>
-                    </figcaption>
-                </figure>
-                <figure>
+                    </div>
+                </div>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={hifiAbout}
                         alt="Screenshot of the new WGM about us page."
                     />
-                    <figcaption><p>The new WGM 'about us' page.</p></figcaption>
-                </figure>
-                <figure>
+                    <div class="figcaption">
+                        <p>The new WGM 'about us' page.</p>
+                    </div>
+                </div>
+                <div class="figure">
                     <Image
                         class="tall-image"
                         src={hifiVisit}
                         alt="Screenshot of the new WGM homepage."
                     />
-                    <figcaption><p>The new WGM 'visit' page.</p></figcaption>
-                </figure>
+                    <div class="figcaption">
+                        <p>The new WGM 'visit' page.</p>
+                    </div>
+                </div>
             </div>
             <div class="process-text">
                 <p class="process-description">
@@ -402,18 +406,18 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         <div class="video" id="walkthrough">
             <p class="video-title title">Project Presentation</p>
             <div class="video-images">
-                <figure>
+                <div class="figure">
                     <Image
                         class="video-embed"
                         src={videoSlide}
                         alt="Yellow textured slide with the word video in the center."
                     />
-                    <figcaption>
+                    <div class="figcaption">
                         <p style="text-align: left;">
                             Project presentation, December 10, 2025.
                         </p>
-                    </figcaption>
-                </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -436,12 +440,12 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         padding: calc(var(--step-0) / 6);
         border-radius: calc(var(--step-0) / 2);
     }
-    .figure {
+    div.figure {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
         background: var(--c-lavender);
     }
-    .figcaption p {
+    div.figcaption p {
         font-size: calc(var(--step-0) * 0.75);
         text-align: right;
         margin-block-start: calc(var(--step-0) / 3);
@@ -482,7 +486,7 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         grid-area: images;
     }
     .tall-image {
-        overflow: scroll;
+        overflow-y: scroll;
         border: 1px solid var(--c-onyx);
     }
     /* title text */
