@@ -13,6 +13,8 @@ import hifiAbout from "../assets/images/about-20251102.png";
 import hifiVisit from "../assets/images/visit-20251102.png";
 import hifiNews from "../assets/images/news & events-20251102.png";
 import wgmLogo from "../assets/images/wgm-logo.svg";
+import krokbragd from "../assets/images/krokbragd.jpeg";
+import blankets from "../assets/images/blankets.jpeg";
 ---
 
 <div id="container">
@@ -67,13 +69,13 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
             <p class="problem-title title">Problem</p>
             <div class="problem-images">
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={wgmFull}
-                        alt="Screenshot of the Weavers Guild of Minnesota homepage, November 2025."
-                    />
                     <div class="figcaption">
                         <p>The WGM site as of November 2025.</p>
+                        <Image
+                            class="tall-image"
+                            src={wgmFull}
+                            alt="Screenshot of the Weavers Guild of Minnesota homepage, November 2025."
+                        />
                     </div>
                 </div>
             </div>
@@ -125,29 +127,29 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
             <p class="concept-title title">Concept</p>
             <div class="concept-images">
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={earlyInspo}
-                        alt="Bright inspiration moodboard."
-                    />
-                    <div class="figcaption">
+                    <div class="figcaption-short">
                         <p>
                             Early project moodboard; inspiration, general
                             direction.
                         </p>
+                        <Image
+                            class="tall-image"
+                            src={earlyInspo}
+                            alt="Bright inspiration moodboard."
+                        />
                     </div>
                 </div>
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={moodboard}
-                        alt="Restrained WGM moodboard."
-                    />
-                    <div class="figcaption">
+                    <div class="figcaption-short">
                         <p>
                             Later moodboard; getting closer to the core style
                             &amp; feel.
                         </p>
+                        <Image
+                            class="tall-image"
+                            src={moodboard}
+                            alt="Restrained WGM moodboard."
+                        />
                     </div>
                 </div>
             </div>
@@ -169,7 +171,32 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         <div class="data" id="research">
             <p class="data-title title">Collected Data & Research</p>
             <div class="data-images">
-                <!-- <Image src={} alt="." /> -->
+                <div class="figure">
+                    <div class="figcaption-short">
+                        <p>
+                            WGM class community (& Hops) with Krokbragd weaving
+                            projects.
+                        </p>
+                        <Image
+                            class="tall-image"
+                            src={krokbragd}
+                            alt="placeholder"
+                        />
+                    </div>
+                </div>
+                <div class="figure">
+                    <div class="figcaption-short">
+                        <p>
+                            WGM class community with wool blanket weaving
+                            projects.
+                        </p>
+                        <Image
+                            class="tall-image"
+                            src={blankets}
+                            alt="placeholder"
+                        />
+                    </div>
+                </div>
             </div>
             <div class="data-text">
                 <p class="data-description">
@@ -396,10 +423,11 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
                     > as a starter theme that I’ll tweak heavily to align with my
                     Figma designs — by starting with Picostrap, I’ll already have
                     some crucial performance considerations in place. In terms of
-                    development process, I’ll rough out pages based on my Figma designs,
-                    then share with a larger group of internal stakeholders for testing
-                    and feedback, continue revising and feedback rounds a few times,
-                    then launch. Target site launch is end of January 2026!
+                    development process, I’ll rough out pages in a sandboxed development
+                    environment based on my Figma designs, then share with a larger
+                    group of internal stakeholders for testing and feedback, continue
+                    revising and feedback rounds a few times, then launch. Development
+                    will occur January–March 2026.
                 </p>
             </div>
         </div>
@@ -445,10 +473,18 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         border: 1px solid var(--c-onyx);
         background: var(--c-lavender);
     }
-    div.figcaption p {
+    div.figcaption {
+        height: 600px;
+        overflow-y: scroll;
+    }
+    div.figcaption-short {
+        height: max-content;
+    }
+    div.figcaption p,
+    div.figcaption-short p {
         font-size: calc(var(--step-0) * 0.75);
-        text-align: right;
-        margin-block-start: calc(var(--step-0) / 3);
+        text-align: left;
+        margin-block-end: calc(var(--step-0) / 3);
     }
     p {
         font-family: var(--f-diatype);
@@ -486,7 +522,6 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
         grid-area: images;
     }
     .tall-image {
-        overflow-y: scroll;
         border: 1px solid var(--c-onyx);
     }
     /* title text */
@@ -596,6 +631,13 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
                 "problem-images";
         }
     }
+    .image-grid-problem {
+        margin-block-start: var(--step-0);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        gap: var(--step-0);
+    }
     .problem-title {
         grid-area: problem-title;
         border: 1px solid var(--c-onyx);
@@ -683,6 +725,8 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
     }
     .data-images {
         grid-area: data-images;
+        display: grid;
+        gap: var(--step-0);
     }
     .data-description {
         padding: var(--step-0);
