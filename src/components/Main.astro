@@ -16,10 +16,13 @@ import wgmLogo from "../assets/images/wgm-logo.svg";
 import krokbragd from "../assets/images/krokbragd.jpeg";
 import blankets from "../assets/images/blankets.jpeg";
 import sitemap from "../assets/images/wgm-new-sitemap.png";
+import us from "../assets/images/us.JPG";
+import mcrWeaving from "../assets/images/mcrWeaving.png";
 ---
 
 <div id="container">
     <main>
+        <!-- INTRO -->
         <div class="intro" id="intro">
             <div class="intro-header">
                 <p class="intro-title">
@@ -57,15 +60,68 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 </p>
             </div>
         </div>
+        <!-- ANCHOR LINKS  -->
         <div class="anchors">
             <ul>
+                <li><a href="#why">Why?</a></li>
                 <li><a href="#problem">Problem</a></li>
                 <li><a href="#concept">Concept</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#walkthrough">Presentation</a></li>
+                <li><a href="#deck">Deck</a></li>
             </ul>
         </div>
+        <!-- WHY -->
+        <div class="why" id="why">
+            <p class="why-title title">Why?</p>
+            <div class="why-images">
+                <div class="figure">
+                    <div class="figcaption-short">
+                        <p>Betsy & me on a very cold day at Lake Tahoe.</p>
+                        <Image
+                            class="tall-image"
+                            src={us}
+                            alt="Two people standing in front of Lake Tahoe in the winter."
+                        />
+                    </div>
+                </div>
+                <div class="figure">
+                    <div class="figcaption-short">
+                        <p>Some of my weaving projects.</p>
+                        <Image
+                            class="tall-image"
+                            src={mcrWeaving}
+                            alt="Close-up images of colorful textile weaving projects."
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="why-text">
+                <p class="why-description">
+                    For the past seven years, WGM has played a key role in my
+                    life — my partner Betsy runs the organization and I’ve spent
+                    a lot of time doing volunteer work, but it has also given me
+                    a creative outlet and community, especially during the
+                    COVID-19 pandemic. During this period, I had been laid off
+                    from my long-time job running a film festival and cinema in
+                    Portland, Oregon, had just moved to Minneapolis, and was
+                    frankly lacking community and prospects. Finding remote work
+                    during this period was incredibly difficult, and I had far
+                    too much time on my hands.
+                </p>
+                <p class="why-description">
+                    Mostly stuck inside due to the pandemic, Betsy taught me how
+                    to weave, patiently working with me to explain and nurture
+                    the details of hand-crafting textiles. Before long, I was
+                    creating projects on my own, many of which I’m very proud
+                    of. During that uncertain period, making textiles gave me a
+                    creative outlet — a very welcome change from the computer
+                    work I’m used to, and frankly a sanity-saver.
+                </p>
+            </div>
+        </div>
+        <!-- PROBLEM -->
         <div class="problem" id="problem">
             <p class="problem-title title">Problem</p>
             <div class="problem-images">
@@ -124,6 +180,7 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 </p>
             </div>
         </div>
+        <!-- CONCEPT -->
         <div class="concept" id="concept">
             <p class="concept-title title">Concept</p>
             <div class="concept-images">
@@ -169,6 +226,7 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 </p>
             </div>
         </div>
+        <!-- RESEARCH -->
         <div class="data" id="research">
             <p class="data-title title">Collected Data & Research</p>
             <div class="data-images">
@@ -243,6 +301,7 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 </p>
             </div>
         </div>
+        <!-- PROCESS -->
         <div class="process" id="process">
             <p class="process-title title">Process</p>
             <div class="figure" id="image-sitemap">
@@ -421,20 +480,27 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 </li>
             </ul>
             <p class="process-description" id="process-description-9">
-                Otherwise, the plan is to develop the site with
+                Otherwise, the plan is to develop the site with either
                 <a
                     class="body-link"
                     href="https://picostrap.com/"
                     target="_blank">Picostrap</a
+                > or
+                <a
+                    class="body-link"
+                    href="https://roots.io/sage/"
+                    target="_blank">Sage</a
                 > as a starter theme that I’ll tweak heavily to align with my Figma
-                designs — by starting with Picostrap, I’ll already have some crucial
-                performance considerations in place. In terms of development process,
-                I’ll rough out pages in a sandboxed development environment based
-                on my Figma designs, then share with a larger group of internal stakeholders
-                for testing and feedback, continue revising and feedback rounds a
-                few times, then launch. Development will occur January–March 2026.
+                designs — by starting with a ready-made styling and structural framework,
+                I’ll already have some crucial performance considerations in place.
+                In terms of development process, I’ll rough out pages in a sandboxed
+                development environment based on my Figma designs, then share with
+                a larger group of internal stakeholders for testing and feedback,
+                continue revising and feedback rounds a few times, then launch. Development
+                will occur January–March 2026.
             </p>
         </div>
+        <!-- VIDEO -->
         <div class="video" id="walkthrough">
             <p class="video-title title">Project Presentation</p>
             <div class="video-images">
@@ -447,6 +513,24 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                             class="video-embed"
                             src={videoSlide}
                             alt="Yellow textured slide with the word video in the center."
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DECK -->
+        <div class="deck" id="deck">
+            <p class="deck-title title">Presentation Deck</p>
+            <div class="deck-images">
+                <div class="figure">
+                    <div class="figcaption-short">
+                        <p style="text-align: left;">
+                            Slide Deck, December 10, 2025.
+                        </p>
+                        <Image
+                            class="deck-embed"
+                            src={videoSlide}
+                            alt="placeholder"
                         />
                     </div>
                 </div>
@@ -597,7 +681,7 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
         ul {
             padding: calc(var(--step-0) / 2);
             display: grid;
-            grid-template-columns: repeat(5, min-content);
+            grid-template-columns: repeat(7, min-content);
             grid-template-rows: 1fr;
             gap: calc(var(--step-0) / 2);
             justify-content: center;
@@ -615,6 +699,46 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
                 }
             }
         }
+    }
+    /* why section styling */
+    .why {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "why-title why-title"
+            "why-text why-images";
+        gap: var(--step-0);
+        padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        @media screen and (width <= 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas:
+                "why-title"
+                "why-text"
+                "why-images";
+        }
+    }
+    .why-title {
+        grid-area: why-title;
+        border: 1px solid var(--c-onyx);
+    }
+    .why-text {
+        grid-area: why-text;
+        display: grid;
+        gap: var(--step-0);
+        align-content: start;
+    }
+    .why-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+        background: white;
+    }
+    .why-images {
+        grid-area: why-images;
+        display: grid;
+        gap: var(--step-0);
     }
     /* problem section styling */
     .problem {
@@ -886,6 +1010,43 @@ import sitemap from "../assets/images/wgm-new-sitemap.png";
         border: 1px solid var(--c-onyx);
     }
     .video-description {
+        padding: var(--step-0);
+        border: 1px solid var(--c-onyx);
+    }
+    /* deck section */
+    .deck {
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "deck-title"
+            "deck-images";
+        gap: var(--step-0);
+        padding: var(--step-1) var(--step-0);
+        border-block-end: 1px solid var(--c-onyx);
+        @media screen and (width <= 900px) {
+            /*grid-template-columns: 1fr;*/
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+                "deck-title"
+                "deck-images";
+        }
+    }
+    .deck-title {
+        border: 1px solid var(--c-onyx);
+        grid-area: deck-title;
+    }
+    .deck-images {
+        grid-area: deck-images;
+        margin: 0;
+    }
+    .deck-embed {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 1px solid var(--c-onyx);
+    }
+    .deck-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
     }
