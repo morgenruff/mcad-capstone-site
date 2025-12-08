@@ -70,7 +70,7 @@ import blankets from "../assets/images/blankets.jpeg";
             <div class="problem-images">
                 <div class="figure">
                     <div class="figcaption">
-                        <p>The WGM site as of November 2025.</p>
+                        <p>The WGM homepage as of November 2025.</p>
                         <Image
                             class="tall-image"
                             src={wgmFull}
@@ -175,7 +175,7 @@ import blankets from "../assets/images/blankets.jpeg";
                     <div class="figcaption-short">
                         <p>
                             WGM class community (& Hops) with Krokbragd weaving
-                            projects.
+                            projects. Photo by Betsy Konop.
                         </p>
                         <Image
                             class="tall-image"
@@ -188,7 +188,7 @@ import blankets from "../assets/images/blankets.jpeg";
                     <div class="figcaption-short">
                         <p>
                             WGM class community with wool blanket weaving
-                            projects.
+                            projects. Photo by Betsy Konop.
                         </p>
                         <Image
                             class="tall-image"
@@ -246,43 +246,43 @@ import blankets from "../assets/images/blankets.jpeg";
             <p class="process-title title">Process</p>
             <div class="process-images">
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={wireHome}
-                        alt="Wireframe of a homepage."
-                    />
                     <div class="figcaption">
                         <p>Initial wireframe for WGM homepage.</p>
+                        <Image
+                            class="tall-image"
+                            src={wireHome}
+                            alt="Wireframe of a website homepage."
+                        />
                     </div>
                 </div>
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={hifiHome}
-                        alt="Screenshot of the new WGM homepage."
-                    />
                     <div class="figcaption">
                         <p>The new WGM Homepage prototype.</p>
+                        <Image
+                            class="tall-image"
+                            src={hifiHome}
+                            alt="Screenshot of the new WGM homepage."
+                        />
                     </div>
                 </div>
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={hifiAbout}
-                        alt="Screenshot of the new WGM about us page."
-                    />
                     <div class="figcaption">
                         <p>The new WGM 'about us' page.</p>
+                        <Image
+                            class="tall-image"
+                            src={hifiAbout}
+                            alt="Screenshot of the new WGM about us page."
+                        />
                     </div>
                 </div>
                 <div class="figure">
-                    <Image
-                        class="tall-image"
-                        src={hifiVisit}
-                        alt="Screenshot of the new WGM homepage."
-                    />
                     <div class="figcaption">
                         <p>The new WGM 'visit' page.</p>
+                        <Image
+                            class="tall-image"
+                            src={hifiVisit}
+                            alt="Screenshot of the new WGM homepage."
+                        />
                     </div>
                 </div>
             </div>
@@ -472,6 +472,7 @@ import blankets from "../assets/images/blankets.jpeg";
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
         background: var(--c-lavender);
+        height: min-content;
     }
     div.figcaption {
         height: 600px;
@@ -655,7 +656,6 @@ import blankets from "../assets/images/blankets.jpeg";
     }
     .problem-images {
         grid-area: problem-images;
-        overflow: scroll;
     }
     /* concept section */
     .concept {
@@ -722,6 +722,7 @@ import blankets from "../assets/images/blankets.jpeg";
         grid-area: data-text;
         display: grid;
         gap: var(--step-0);
+        align-content: start;
     }
     .data-images {
         grid-area: data-images;
@@ -732,6 +733,7 @@ import blankets from "../assets/images/blankets.jpeg";
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
         background: white;
+        height: min-content;
     }
     /* process section */
     .process {
