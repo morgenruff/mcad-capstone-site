@@ -15,6 +15,7 @@ import hifiNews from "../assets/images/news & events-20251102.png";
 import wgmLogo from "../assets/images/wgm-logo.svg";
 import krokbragd from "../assets/images/krokbragd.jpeg";
 import blankets from "../assets/images/blankets.jpeg";
+import sitemap from "../assets/images/wgm-new-sitemap.png";
 ---
 
 <div id="container">
@@ -244,206 +245,209 @@ import blankets from "../assets/images/blankets.jpeg";
         </div>
         <div class="process" id="process">
             <p class="process-title title">Process</p>
-            <div class="process-images">
-                <div class="figure">
-                    <div class="figcaption">
-                        <p>Initial wireframe for WGM homepage.</p>
-                        <Image
-                            class="tall-image"
-                            src={wireHome}
-                            alt="Wireframe of a website homepage."
-                        />
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="figcaption">
-                        <p>The new WGM Homepage prototype.</p>
-                        <Image
-                            class="tall-image"
-                            src={hifiHome}
-                            alt="Screenshot of the new WGM homepage."
-                        />
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="figcaption">
-                        <p>The new WGM 'about us' page.</p>
-                        <Image
-                            class="tall-image"
-                            src={hifiAbout}
-                            alt="Screenshot of the new WGM about us page."
-                        />
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="figcaption">
-                        <p>The new WGM 'visit' page.</p>
-                        <Image
-                            class="tall-image"
-                            src={hifiVisit}
-                            alt="Screenshot of the new WGM homepage."
-                        />
-                    </div>
+            <div class="figure" id="image-sitemap">
+                <div class="figcaption-short">
+                    <p>
+                        Part of the "very long document": a new sitemap
+                        proposal.
+                    </p>
+                    <Image class="tall-image" src={sitemap} alt="placeholder" />
                 </div>
             </div>
-            <div class="process-text">
-                <p class="process-description">
-                    This project started in a kind of gut-feeling place: the
-                    knowledge that something about the WGM website was wrong,
-                    but not so much what to do about it. An organization like
-                    WGM does not have a lot of excess budget every year, as a
-                    small arts nonprofit they work really hard to maximize the
-                    potential of every dollar they earn. So we needed an
-                    extremely budget-friendly new website, something that could
-                    serve a much greater purpose than the financial resources
-                    put into it.
-                </p>
-                <p class="process-description">
-                    Conceptually, we sought to have the website feel very
-                    contemporary, yet have some staying power so we don’t have
-                    to start from scratch again in five years. We needed a site
-                    that is very user-friendly across demographics. Finally, we
-                    needed a site that reflects the crafts taught at the Guild
-                    while instilling a sense of joy and warmth.
-                </p>
-                <p class="process-description">
-                    First, I spent some time gathering all of the content (text,
-                    images, video, etc.) on the current WGM site, and put it all
-                    into a <a
-                        class="body-link"
-                        href="https://docs.google.com/document/d/1NferbwDcXmgKbl5hn4y4Nmx7NyS1naMfTcVSP28Ll5k/edit?usp=sharing"
-                        >very long document</a
-                    >. From there, I assessed the state of the text content and
-                    in collaboration with my partners at WGM, set about
-                    re-organizing the site and condensing disparate information
-                    down into more meaningful groups, thereby setting up a
-                    situation where the new site could have fewer — but
-                    individually richer — pages. This makes navigating the site
-                    much easier. We shifted from more academic language to more
-                    action-oriented wording to describe things one can do with
-                    the new site, simplifying the experience significantly.
-                </p>
-                <p class="process-description">
-                    Then, onto new branding. As mentioned before, WGM’s new
-                    color palette is based on colors commonly found in natural
-                    dyeing processes, originating from native-to-MN dye plants
-                    like madder, indigo, black walnut, nettle, and goldenrod.
-                    Our aim with this new palette is to be rooted in this place
-                    we call home while providing the user with a relaxing,
-                    beautiful experience that might feel close to their own
-                    weaving, spinning, and/or dyeing practice.
-                </p>
-                <p class="process-description">
-                    In terms of typography, in collaboration we chose to break
-                    up large headings and copy. The lovely, expressive serif
-                    typeface Violeta by Javier Quintana Godoy of <a
-                        class="body-link"
-                        href="https://quintana-font.cl/typefaces/violeta"
-                        target="_blank">Quintana Type</a
-                    > provides large headings and major focus points. The designed-for-accessibility,
-                    highly functional yet funky sans serif typeface Inclusive Sans
-                    by
-                    <a
-                        class="body-link"
-                        href="https://www.oliviaking.com/inclusivesans/feature"
-                        target="_blank">Olivia King</a
-                    > provides all body text and smaller inline headings, with a particular
-                    focus on readability. Typographic contrast was important in coming
-                    to these choices.
-                </p>
-                <Image
-                    src={typeColor}
-                    alt="Brand guidelines for WGM."
-                    style="border: 1px solid var(--c-goldenrod);"
-                />
-                <p class="process-description">
-                    Next, I dove into creating a wireframes of low-fidelity
-                    versions of a few potential pages for a new site, working in
-                    black-and-white and with placeholder fonts and image boxes.
-                    This passed first inspection by WGM partners without issue.
-                </p>
-                <p class="process-description">
-                    Subsequently, I moved to high-fidelity prototyping in Figma,
-                    designing most pages that will be deployed on the real
-                    website post-development. I developed a componentized
-                    approach based in high-contrast separation of content
-                    blocks, in order to avoid a “floating” feeling through the
-                    design — this is an informational site, so information
-                    should be easy to find and take in. Additionally, since the
-                    site will be built on top of the Wordpress CMS, which uses a
-                    block-based editor in its core product, the componentized
-                    approach will enable relatively easy creation of reusable
-                    blocks across pages in the live site, thus enabling
-                    page-to-page design consistency and predictability for the
-                    user. As part of my prototyping process, I always keep good
-                    CSS principles in mind, knowing both what’s possible with
-                    styling on the web and how to achieve it, but also what
-                    potential pitfalls exist when translating static designs
-                    created in Figma to a living, responsive website that
-                    follows web standards and keeps JavaScript bloat to an
-                    absolute minimum.
-                </p>
-                <ul class="process-description">
-                    As a result, the prototypes presented here are the current
-                    state of the overarching project, and the final result of my
-                    capstone work. Site development and deployment will directly
-                    follow. In development, one of the major challenges will be
-                    integrating existing business-critical tools into the new
-                    design, including:
-                    <li>
-                        <a
-                            class="body-link"
-                            href="https://membee.com/"
-                            target="_blank">Membee</a
-                        >
-                        donor/member relations CRM, which houses information on all
-                        of WGM’s learning community
-                    </li>
-                    <li>
-                        PayPal payments processing - but thinking of switching
-                        services, still in the research phase
-                    </li>
-                    <li>
-                        Vimeo embeds linked to member records, so those who sign
-                        up for classes can access class recordings afterwards
-                    </li>
-                    <li>
-                        New e-commerce functionality via WooCommerce — currently
-                        the only online transactions WGM processes are annual
-                        membership fees, done through Membee with PayPal as
-                        payment processor
-                    </li>
-                </ul>
-                <p class="process-description">
-                    Otherwise, the plan is to develop the site with
-                    <a
-                        class="body-link"
-                        href="https://picostrap.com/"
-                        target="_blank">Picostrap</a
-                    > as a starter theme that I’ll tweak heavily to align with my
-                    Figma designs — by starting with Picostrap, I’ll already have
-                    some crucial performance considerations in place. In terms of
-                    development process, I’ll rough out pages in a sandboxed development
-                    environment based on my Figma designs, then share with a larger
-                    group of internal stakeholders for testing and feedback, continue
-                    revising and feedback rounds a few times, then launch. Development
-                    will occur January–March 2026.
-                </p>
+            <div class="figure" id="image-type-color">
+                <div class="figcaption-short">
+                    <p>New type and color for WGM.</p>
+                    <Image
+                        class="tall-image"
+                        src={typeColor}
+                        alt="Brand guidelines for WGM."
+                    />
+                </div>
             </div>
+            <div class="figure" id="image-homepage-wireframe">
+                <div class="figcaption">
+                    <p>Initial wireframe for WGM homepage.</p>
+                    <Image
+                        class="tall-image"
+                        src={wireHome}
+                        alt="Wireframe of a website homepage."
+                    />
+                </div>
+            </div>
+            <div class="figure" id="image-homepage-prototype">
+                <div class="figcaption">
+                    <p>The new WGM Homepage prototype.</p>
+                    <Image
+                        class="tall-image"
+                        src={hifiHome}
+                        alt="Screenshot of the new WGM homepage."
+                    />
+                </div>
+            </div>
+            <div class="figure" id="image-about-prototype">
+                <div class="figcaption">
+                    <p>The new WGM 'about us' page.</p>
+                    <Image
+                        class="tall-image"
+                        src={hifiAbout}
+                        alt="Screenshot of the new WGM about us page."
+                    />
+                </div>
+            </div>
+            <div class="figure" id="image-visit-prototype">
+                <div class="figcaption">
+                    <p>The new WGM 'visit' page.</p>
+                    <Image
+                        class="tall-image"
+                        src={hifiVisit}
+                        alt="Screenshot of the new WGM homepage."
+                    />
+                </div>
+            </div>
+            <p class="process-description" id="process-description-1">
+                This project started in a kind of gut-feeling place: the
+                knowledge that something about the WGM website was wrong, but
+                not so much what to do about it. An organization like WGM does
+                not have a lot of excess budget every year, as a small arts
+                nonprofit they work really hard to maximize the potential of
+                every dollar they earn. So we needed an extremely
+                budget-friendly new website, something that could serve a much
+                greater purpose than the financial resources put into it.
+            </p>
+            <p class="process-description" id="process-description-2">
+                Conceptually, we sought to have the website feel very
+                contemporary, yet have some staying power so we don’t have to
+                start from scratch again in five years. We needed a site that is
+                very user-friendly across demographics. Finally, we needed a
+                site that reflects the crafts taught at the Guild while
+                instilling a sense of joy and warmth.
+            </p>
+            <p class="process-description" id="process-description-3">
+                First, I spent some time gathering all of the content (text,
+                images, video, etc.) on the current WGM site, and put it all
+                into a <a
+                    class="body-link"
+                    href="https://docs.google.com/document/d/1NferbwDcXmgKbl5hn4y4Nmx7NyS1naMfTcVSP28Ll5k/edit?usp=sharing"
+                    >very long document</a
+                >. From there, I assessed the state of the text content and in
+                collaboration with my partners at WGM, set about re-organizing
+                the site and condensing disparate information down into more
+                meaningful groups, thereby setting up a situation where the new
+                site could have fewer — but individually richer — pages. This
+                makes navigating the site much easier. We shifted from more
+                academic language to more action-oriented wording to describe
+                things one can do with the new site, simplifying the experience
+                significantly.
+            </p>
+            <p class="process-description" id="process-description-4">
+                Then, onto new branding. As mentioned before, WGM’s new color
+                palette is based on colors commonly found in natural dyeing
+                processes, originating from native-to-MN dye plants like madder,
+                indigo, black walnut, nettle, and goldenrod. Our aim with this
+                new palette is to be rooted in this place we call home while
+                providing the user with a relaxing, beautiful experience that
+                might feel close to their own weaving, spinning, and/or dyeing
+                practice.
+            </p>
+            <p class="process-description" id="process-description-5">
+                In terms of typography, in collaboration we chose to break up
+                large headings and copy. The lovely, expressive serif typeface
+                Violeta by Javier Quintana Godoy of <a
+                    class="body-link"
+                    href="https://quintana-font.cl/typefaces/violeta"
+                    target="_blank">Quintana Type</a
+                > provides large headings and major focus points. The designed-for-accessibility,
+                highly functional yet funky sans serif typeface Inclusive Sans by
+                <a
+                    class="body-link"
+                    href="https://www.oliviaking.com/inclusivesans/feature"
+                    target="_blank">Olivia King</a
+                > provides all body text and smaller inline headings, with a particular
+                focus on readability. Typographic contrast was important in coming
+                to these choices.
+            </p>
+            <p class="process-description" id="process-description-6">
+                Next, I dove into creating a wireframes of low-fidelity versions
+                of a few potential pages for a new site, working in
+                black-and-white and with placeholder fonts and image boxes. This
+                passed first inspection by WGM partners without issue.
+            </p>
+            <p class="process-description" id="process-description-7">
+                Subsequently, I moved to high-fidelity prototyping in Figma,
+                designing most pages that will be deployed on the real website
+                post-development. I developed a componentized approach based in
+                high-contrast separation of content blocks, in order to avoid a
+                “floating” feeling through the design — this is an informational
+                site, so information should be easy to find and take in.
+                Additionally, since the site will be built on top of the
+                Wordpress CMS, which uses a block-based editor in its core
+                product, the componentized approach will enable relatively easy
+                creation of reusable blocks across pages in the live site, thus
+                enabling page-to-page design consistency and predictability for
+                the user. As part of my prototyping process, I always keep good
+                CSS principles in mind, knowing both what’s possible with
+                styling on the web and how to achieve it, but also what
+                potential pitfalls exist when translating static designs created
+                in Figma to a living, responsive website that follows web
+                standards and keeps JavaScript bloat to an absolute minimum.
+            </p>
+            <ul class="process-description" id="process-description-8">
+                As a result, the prototypes presented here are the current state
+                of the overarching project, and the final result of my capstone
+                work. Site development and deployment will directly follow. In
+                development, one of the major challenges will be integrating
+                existing business-critical tools into the new design, including:
+                <li>
+                    <a
+                        class="body-link"
+                        href="https://membee.com/"
+                        target="_blank">Membee</a
+                    >
+                    donor/member relations CRM, which houses information on all of
+                    WGM’s learning community
+                </li>
+                <li>
+                    PayPal payments processing - but thinking of switching
+                    services, still in the research phase
+                </li>
+                <li>
+                    Vimeo embeds linked to member records, so those who sign up
+                    for classes can access class recordings afterwards
+                </li>
+                <li>
+                    New e-commerce functionality via WooCommerce — currently the
+                    only online transactions WGM processes are annual membership
+                    fees, done through Membee with PayPal as payment processor
+                </li>
+            </ul>
+            <p class="process-description" id="process-description-9">
+                Otherwise, the plan is to develop the site with
+                <a
+                    class="body-link"
+                    href="https://picostrap.com/"
+                    target="_blank">Picostrap</a
+                > as a starter theme that I’ll tweak heavily to align with my Figma
+                designs — by starting with Picostrap, I’ll already have some crucial
+                performance considerations in place. In terms of development process,
+                I’ll rough out pages in a sandboxed development environment based
+                on my Figma designs, then share with a larger group of internal stakeholders
+                for testing and feedback, continue revising and feedback rounds a
+                few times, then launch. Development will occur January–March 2026.
+            </p>
         </div>
         <div class="video" id="walkthrough">
             <p class="video-title title">Project Presentation</p>
             <div class="video-images">
                 <div class="figure">
-                    <Image
-                        class="video-embed"
-                        src={videoSlide}
-                        alt="Yellow textured slide with the word video in the center."
-                    />
-                    <div class="figcaption">
+                    <div class="figcaption-short">
                         <p style="text-align: left;">
                             Project presentation, December 10, 2025.
                         </p>
+                        <Image
+                            class="video-embed"
+                            src={videoSlide}
+                            alt="Yellow textured slide with the word video in the center."
+                        />
                     </div>
                 </div>
             </div>
@@ -739,41 +743,114 @@ import blankets from "../assets/images/blankets.jpeg";
     .process {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, min-content);
+        grid-template-rows: repeat(11, min-content);
         grid-template-areas:
             "process-title process-title"
-            "process-text process-images";
+            "process-text-1 process-images-1"
+            "process-text-2 process-images-1"
+            "process-text-sitemap process-images-sitemap"
+            "process-text-branding-1 process-images-branding"
+            "process-text-branding-2 process-images-branding"
+            "process-text-wireframe process-images-wireframe"
+            "process-text-prototype-1 process-images-prototype-1"
+            "process-text-prototype-2 process-images-prototype-2"
+            "process-text-prototype-3 process-images-prototype-3"
+            "process-text-prototype-4 process-images-prototype-4"
+            "null process-images-extra-1"
+            "null process-images-extra-2"
+            "null process-images-extra-3"
+            "null process-images-extra-4";
         gap: var(--step-0);
         padding: var(--step-1) var(--step-0);
         border-block-end: 1px solid var(--c-onyx);
         @media screen and (width <= 900px) {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, min-content);
+            grid-template-rows: repeat(20, min-content);
             grid-template-areas:
                 "process-title"
-                "process-text"
-                "process-images";
+                "process-text-1"
+                "process-text-2"
+                "process-text-sitemap"
+                "process-images-sitemap"
+                "process-text-branding-1"
+                "process-images-branding"
+                "process-text-branding-2"
+                "process-text-wireframe"
+                "process-images-wireframe"
+                "process-text-prototype-1"
+                "process-images-prototype-1"
+                "process-text-prototype-2"
+                "process-images-prototype-2"
+                "process-text-prototype-3"
+                "process-images-prototype-3"
+                "process-text-prototype-4"
+                "process-images-prototype-4"
+                "process-images-extra-1"
+                "process-images-extra-2"
+                "process-images-extra-3"
+                "process-images-extra-4";
         }
     }
     .process-title {
         grid-area: process-title;
         border: 1px solid var(--c-onyx);
     }
-    .process-text {
-        grid-area: process-text;
-        display: grid;
-        gap: var(--step-0);
-        align-content: start;
+    #process-description-1 {
+        grid-area: process-text-1;
     }
-    .process-images {
-        grid-area: process-images;
-        display: grid;
-        gap: var(--step-0);
+    #process-description-2 {
+        grid-area: process-text-2;
+    }
+    #process-description-3 {
+        grid-area: process-text-sitemap;
+    }
+    #process-description-4 {
+        grid-area: process-text-branding-1;
+    }
+    #process-description-5 {
+        grid-area: process-text-branding-2;
+    }
+    #process-description-6 {
+        grid-area: process-text-wireframe;
+    }
+    #process-description-7 {
+        grid-area: process-text-prototype-1;
+    }
+    #process-description-8 {
+        grid-area: process-text-prototype-2;
+    }
+    #process-description-9 {
+        grid-area: process-text-prototype-3;
+    }
+    #process-description-10 {
+        grid-area: process-text-prototype-4;
+    }
+    #process-description-11 {
+        grid-area: process-text-extra;
+    }
+    #image-sitemap {
+        grid-area: process-images-sitemap;
+    }
+    #image-type-color {
+        grid-area: process-images-branding;
+    }
+    #image-homepage-wireframe {
+        grid-area: process-images-wireframe;
+    }
+    #image-homepage-prototype {
+        grid-area: process-images-prototype-1;
+    }
+    #image-about-prototype {
+        grid-area: process-images-prototype-2;
+    }
+    #image-visit-prototype {
+        grid-area: process-images-prototype-3;
     }
     .process-description {
         padding: var(--step-0);
         border: 1px solid var(--c-onyx);
         background: white;
+        height: min-content;
     }
     /* video section */
     .video {
